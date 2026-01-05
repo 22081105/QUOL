@@ -1,0 +1,1029 @@
+/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2025-11-12 22:09:33,560 [INFO] Configuration: {"MODEL_NAME": "meta-llama/Llama-2-7b-hf", "MAX_OUTPUT_TOKENS": 16384, "MIN_PROMPT_LENGTH": 3, "MAX_PROMPT_LENGTH": 7, "DEVICE": "cuda", "SAVE_PATH": "/srv/scratch/deeplearning/z3550042/DIN/EA/Llama", "POPULATION_SIZE": 20, "GENERATIONS": 500, "MUTATION_RATE": 0.05, "ALPHA": 2}
+2025-11-12 22:09:33,560 [INFO] Configuration: {"MODEL_NAME": "meta-llama/Llama-2-7b-hf", "MAX_OUTPUT_TOKENS": 16384, "MIN_PROMPT_LENGTH": 3, "MAX_PROMPT_LENGTH": 7, "DEVICE": "cuda", "SAVE_PATH": "/srv/scratch/deeplearning/z3550042/DIN/EA/Llama", "POPULATION_SIZE": 20, "GENERATIONS": 500, "MUTATION_RATE": 0.05, "ALPHA": 2}
+2025-11-12 22:09:33,560 [INFO] Decoding/Server knobs: {"do_sample": true, "temperature": null, "top_p": null, "repetition_penalty": null, "stop_sequences": null, "max_new_tokens": 16384}
+2025-11-12 22:09:33,560 [INFO] Decoding/Server knobs: {"do_sample": true, "temperature": null, "top_p": null, "repetition_penalty": null, "stop_sequences": null, "max_new_tokens": 16384}
+2025-11-12 22:09:33,560 [INFO] Save path ensured at: /srv/scratch/deeplearning/z3550042/DIN/EA/Llama
+2025-11-12 22:09:33,560 [INFO] Save path ensured at: /srv/scratch/deeplearning/z3550042/DIN/EA/Llama
+2025-11-12 22:09:33,560 [DEBUG] TF32 enabled for CUDA matmul
+2025-11-12 22:09:33,560 [DEBUG] TF32 enabled for CUDA matmul
+2025-11-12 22:09:33,560 [INFO] Loading Llama-2-7b-hf model and tokenizer...
+2025-11-12 22:09:33,560 [INFO] Loading Llama-2-7b-hf model and tokenizer...
+2025-11-12 22:09:33,564 [DEBUG] Starting new HTTPS connection (1): huggingface.co:443
+2025-11-12 22:09:33,564 [DEBUG] Starting new HTTPS connection (1): huggingface.co:443
+2025-11-12 22:09:33,814 [DEBUG] https://huggingface.co:443 "HEAD /meta-llama/Llama-2-7b-hf/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-11-12 22:09:33,814 [DEBUG] https://huggingface.co:443 "HEAD /meta-llama/Llama-2-7b-hf/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-11-12 22:09:34,208 [DEBUG] https://huggingface.co:443 "GET /api/models/meta-llama/Llama-2-7b-hf/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-11-12 22:09:34,208 [DEBUG] https://huggingface.co:443 "GET /api/models/meta-llama/Llama-2-7b-hf/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-11-12 22:09:34,520 [DEBUG] https://huggingface.co:443 "HEAD /meta-llama/Llama-2-7b-hf/resolve/main/config.json HTTP/1.1" 200 0
+2025-11-12 22:09:34,520 [DEBUG] https://huggingface.co:443 "HEAD /meta-llama/Llama-2-7b-hf/resolve/main/config.json HTTP/1.1" 200 0
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.37s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.49s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.63s/it]
+2025-11-12 22:09:40,288 [DEBUG] https://huggingface.co:443 "HEAD /meta-llama/Llama-2-7b-hf/resolve/main/generation_config.json HTTP/1.1" 200 0
+2025-11-12 22:09:40,288 [DEBUG] https://huggingface.co:443 "HEAD /meta-llama/Llama-2-7b-hf/resolve/main/generation_config.json HTTP/1.1" 200 0
+2025-11-12 22:09:40,520 [DEBUG] https://huggingface.co:443 "HEAD /meta-llama/Llama-2-7b-hf/resolve/main/custom_generate/generate.py HTTP/1.1" 404 0
+2025-11-12 22:09:40,520 [DEBUG] https://huggingface.co:443 "HEAD /meta-llama/Llama-2-7b-hf/resolve/main/custom_generate/generate.py HTTP/1.1" 404 0
+2025-11-12 22:10:23,591 [INFO] Llama-2-7b-hf model loaded on cuda
+2025-11-12 22:10:23,591 [INFO] Llama-2-7b-hf model loaded on cuda
+2025-11-12 22:10:23,602 [DEBUG] Gradient checkpointing enabled for Llama-2-7b-hf model
+2025-11-12 22:10:23,602 [DEBUG] Gradient checkpointing enabled for Llama-2-7b-hf model
+2025-11-12 22:10:23,602 [INFO] EOS_TOKEN_ID: 2, VOCAB_SIZE: 32000
+2025-11-12 22:10:23,602 [INFO] EOS_TOKEN_ID: 2, VOCAB_SIZE: 32000
+[nltk_data] Downloading package words to /home/z3550042/nltk_data...
+[nltk_data]   Package words is already up-to-date!
+2025-11-12 22:10:26,288 [INFO] Loaded 105 previously saved >8192 prompts for deduplication.
+2025-11-12 22:10:26,288 [INFO] Loaded 105 previously saved >8192 prompts for deduplication.
+2025-11-12 22:10:26,289 [INFO] Loaded checkpoint from generation 48
+2025-11-12 22:10:26,289 [INFO] Loaded checkpoint from generation 48
+2025-11-12 22:10:26,289 [INFO] Generation 49 START
+2025-11-12 22:10:26,289 [INFO] Generation 49 START
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+This is a friendly reminder - the current text generation call has exceeded the model's predefined maximum length (4096). Depending on the model, you may observe exceptions, performance degradation, or nothing at all.
+2025-11-12 22:13:29,993 [DEBUG] [Gen 49 | Timestep 0] Prompt Length: 7 | Generated Tokens: 6420 | Reward: -43419
+2025-11-12 22:13:29,993 [DEBUG] [Gen 49 | Timestep 0] Prompt Length: 7 | Generated Tokens: 6420 | Reward: -43419
+[Gen 49 | Timestep 0] Prompt Length: 7 | Generated Tokens: 6420 | Reward: -43419
+2025-11-12 22:16:18,679 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-12 22:16:18,679 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-12 22:16:18,682 [DEBUG] [Gen 49 | Timestep 1] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-12 22:16:18,682 [DEBUG] [Gen 49 | Timestep 1] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 49 | Timestep 1] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-12 22:23:01,428 [DEBUG] [Gen 49 | Timestep 2] Prompt Length: 7 | Generated Tokens: 11539 | Reward: -12705
+2025-11-12 22:23:01,428 [DEBUG] [Gen 49 | Timestep 2] Prompt Length: 7 | Generated Tokens: 11539 | Reward: -12705
+[Gen 49 | Timestep 2] Prompt Length: 7 | Generated Tokens: 11539 | Reward: -12705
+2025-11-12 22:23:01,428 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-12 22:23:01,428 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-12 22:32:41,020 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-12 22:32:41,020 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-12 22:32:41,023 [DEBUG] [Gen 49 | Timestep 3] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-12 22:32:41,023 [DEBUG] [Gen 49 | Timestep 3] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 49 | Timestep 3] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-12 22:43:49,748 [DEBUG] [Gen 49 | Timestep 4] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-11-12 22:43:49,748 [DEBUG] [Gen 49 | Timestep 4] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 49 | Timestep 4] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-11-12 22:43:49,749 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-12 22:43:49,749 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-12 22:50:43,201 [DEBUG] [Gen 49 | Timestep 5] Prompt Length: 7 | Generated Tokens: 11774 | Reward: -11295
+2025-11-12 22:50:43,201 [DEBUG] [Gen 49 | Timestep 5] Prompt Length: 7 | Generated Tokens: 11774 | Reward: -11295
+[Gen 49 | Timestep 5] Prompt Length: 7 | Generated Tokens: 11774 | Reward: -11295
+2025-11-12 22:50:43,203 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-12 22:50:43,203 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-12 22:53:31,479 [DEBUG] [Gen 49 | Timestep 6] Prompt Length: 7 | Generated Tokens: 5993 | Reward: -45981
+2025-11-12 22:53:31,479 [DEBUG] [Gen 49 | Timestep 6] Prompt Length: 7 | Generated Tokens: 5993 | Reward: -45981
+[Gen 49 | Timestep 6] Prompt Length: 7 | Generated Tokens: 5993 | Reward: -45981
+2025-11-12 23:04:39,156 [DEBUG] [Gen 49 | Timestep 7] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-11-12 23:04:39,156 [DEBUG] [Gen 49 | Timestep 7] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 49 | Timestep 7] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-11-12 23:04:39,169 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-12 23:04:39,169 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-12 23:07:45,419 [DEBUG] [Gen 49 | Timestep 8] Prompt Length: 7 | Generated Tokens: 6498 | Reward: -42951
+2025-11-12 23:07:45,419 [DEBUG] [Gen 49 | Timestep 8] Prompt Length: 7 | Generated Tokens: 6498 | Reward: -42951
+[Gen 49 | Timestep 8] Prompt Length: 7 | Generated Tokens: 6498 | Reward: -42951
+2025-11-12 23:10:54,853 [DEBUG] [Gen 49 | Timestep 9] Prompt Length: 7 | Generated Tokens: 6585 | Reward: -42429
+2025-11-12 23:10:54,853 [DEBUG] [Gen 49 | Timestep 9] Prompt Length: 7 | Generated Tokens: 6585 | Reward: -42429
+[Gen 49 | Timestep 9] Prompt Length: 7 | Generated Tokens: 6585 | Reward: -42429
+2025-11-12 23:11:03,197 [DEBUG] [Gen 49 | Timestep 10] Prompt Length: 7 | Generated Tokens: 367 | Reward: -79737
+2025-11-12 23:11:03,197 [DEBUG] [Gen 49 | Timestep 10] Prompt Length: 7 | Generated Tokens: 367 | Reward: -79737
+[Gen 49 | Timestep 10] Prompt Length: 7 | Generated Tokens: 367 | Reward: -79737
+2025-11-12 23:14:13,002 [DEBUG] [Gen 49 | Timestep 11] Prompt Length: 7 | Generated Tokens: 6595 | Reward: -42369
+2025-11-12 23:14:13,002 [DEBUG] [Gen 49 | Timestep 11] Prompt Length: 7 | Generated Tokens: 6595 | Reward: -42369
+[Gen 49 | Timestep 11] Prompt Length: 7 | Generated Tokens: 6595 | Reward: -42369
+2025-11-12 23:20:15,023 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-12 23:20:15,023 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-12 23:20:15,026 [DEBUG] [Gen 49 | Timestep 12] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-12 23:20:15,026 [DEBUG] [Gen 49 | Timestep 12] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 49 | Timestep 12] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-12 23:26:49,070 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-12 23:26:49,070 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-12 23:26:49,073 [DEBUG] [Gen 49 | Timestep 13] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-12 23:26:49,073 [DEBUG] [Gen 49 | Timestep 13] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 49 | Timestep 13] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-12 23:31:27,287 [DEBUG] [Gen 49 | Timestep 14] Prompt Length: 7 | Generated Tokens: 8831 | Reward: -28953
+2025-11-12 23:31:27,287 [DEBUG] [Gen 49 | Timestep 14] Prompt Length: 7 | Generated Tokens: 8831 | Reward: -28953
+[Gen 49 | Timestep 14] Prompt Length: 7 | Generated Tokens: 8831 | Reward: -28953
+2025-11-12 23:31:27,303 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-12 23:31:27,303 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-12 23:38:02,706 [DEBUG] [Gen 49 | Timestep 15] Prompt Length: 7 | Generated Tokens: 11413 | Reward: -13461
+2025-11-12 23:38:02,706 [DEBUG] [Gen 49 | Timestep 15] Prompt Length: 7 | Generated Tokens: 11413 | Reward: -13461
+[Gen 49 | Timestep 15] Prompt Length: 7 | Generated Tokens: 11413 | Reward: -13461
+2025-11-12 23:38:02,707 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-12 23:38:02,707 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-12 23:42:22,208 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-12 23:42:22,208 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-12 23:42:22,221 [DEBUG] [Gen 49 | Timestep 16] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-12 23:42:22,221 [DEBUG] [Gen 49 | Timestep 16] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 49 | Timestep 16] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-12 23:47:57,911 [DEBUG] [Gen 49 | Timestep 17] Prompt Length: 7 | Generated Tokens: 10142 | Reward: -21087
+2025-11-12 23:47:57,911 [DEBUG] [Gen 49 | Timestep 17] Prompt Length: 7 | Generated Tokens: 10142 | Reward: -21087
+[Gen 49 | Timestep 17] Prompt Length: 7 | Generated Tokens: 10142 | Reward: -21087
+2025-11-12 23:47:57,927 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-12 23:47:57,927 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-12 23:51:03,552 [DEBUG] [Gen 49 | Timestep 18] Prompt Length: 7 | Generated Tokens: 6481 | Reward: -43053
+2025-11-12 23:51:03,552 [DEBUG] [Gen 49 | Timestep 18] Prompt Length: 7 | Generated Tokens: 6481 | Reward: -43053
+[Gen 49 | Timestep 18] Prompt Length: 7 | Generated Tokens: 6481 | Reward: -43053
+2025-11-12 23:56:00,537 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-12 23:56:00,537 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-12 23:56:00,553 [DEBUG] [Gen 49 | Timestep 19] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-12 23:56:00,553 [DEBUG] [Gen 49 | Timestep 19] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 49 | Timestep 19] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-12 23:56:00,553 [INFO] [Budgeted Success] after 2760 evals (offset 2740): Success@OGF≥2=0.350, Success@OGF≥4=0.100
+2025-11-12 23:56:00,553 [INFO] [Budgeted Success] after 2760 evals (offset 2740): Success@OGF≥2=0.350, Success@OGF≥4=0.100
+2025-11-12 23:56:00,553 [INFO] Generation 49 SUMMARY: {"generation": 49, "population": [{"prompt_length": 7, "reward": -43419}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -12705}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -11295}, {"prompt_length": 7, "reward": -45981}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -42951}, {"prompt_length": 7, "reward": -42429}, {"prompt_length": 7, "reward": -79737}, {"prompt_length": 7, "reward": -42369}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -28953}, {"prompt_length": 7, "reward": -13461}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -21087}, {"prompt_length": 7, "reward": -43053}, {"prompt_length": 7, "reward": -1000000.0}], "best_reward": 16372, "average_reward": -319735.0}
+2025-11-12 23:56:00,553 [INFO] Generation 49 SUMMARY: {"generation": 49, "population": [{"prompt_length": 7, "reward": -43419}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -12705}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -11295}, {"prompt_length": 7, "reward": -45981}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -42951}, {"prompt_length": 7, "reward": -42429}, {"prompt_length": 7, "reward": -79737}, {"prompt_length": 7, "reward": -42369}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -28953}, {"prompt_length": 7, "reward": -13461}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -21087}, {"prompt_length": 7, "reward": -43053}, {"prompt_length": 7, "reward": -1000000.0}], "best_reward": 16372, "average_reward": -319735.0}
+Generation 49 SUMMARY: {"generation": 49, "population": [{"prompt_length": 7, "reward": -43419}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -12705}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -11295}, {"prompt_length": 7, "reward": -45981}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -42951}, {"prompt_length": 7, "reward": -42429}, {"prompt_length": 7, "reward": -79737}, {"prompt_length": 7, "reward": -42369}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -28953}, {"prompt_length": 7, "reward": -13461}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -21087}, {"prompt_length": 7, "reward": -43053}, {"prompt_length": 7, "reward": -1000000.0}], "best_reward": 16372, "average_reward": -319735.0}
+2025-11-12 23:56:00,565 [INFO] Checkpoint saved at generation 49
+2025-11-12 23:56:00,565 [INFO] Checkpoint saved at generation 49
+--- End of Generation 49 ---
+
+2025-11-12 23:56:00,565 [INFO] Generation 50 START
+2025-11-12 23:56:00,565 [INFO] Generation 50 START
+2025-11-13 00:01:55,529 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 00:01:55,529 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 00:01:55,532 [DEBUG] [Gen 50 | Timestep 0] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 00:01:55,532 [DEBUG] [Gen 50 | Timestep 0] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 50 | Timestep 0] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 00:08:33,992 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 00:08:33,992 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 00:08:33,995 [DEBUG] [Gen 50 | Timestep 1] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 00:08:33,995 [DEBUG] [Gen 50 | Timestep 1] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 50 | Timestep 1] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 00:10:45,560 [DEBUG] [Gen 50 | Timestep 2] Prompt Length: 7 | Generated Tokens: 4909 | Reward: -52485
+2025-11-13 00:10:45,560 [DEBUG] [Gen 50 | Timestep 2] Prompt Length: 7 | Generated Tokens: 4909 | Reward: -52485
+[Gen 50 | Timestep 2] Prompt Length: 7 | Generated Tokens: 4909 | Reward: -52485
+2025-11-13 00:10:59,993 [DEBUG] [Gen 50 | Timestep 3] Prompt Length: 7 | Generated Tokens: 629 | Reward: -78165
+2025-11-13 00:10:59,993 [DEBUG] [Gen 50 | Timestep 3] Prompt Length: 7 | Generated Tokens: 629 | Reward: -78165
+[Gen 50 | Timestep 3] Prompt Length: 7 | Generated Tokens: 629 | Reward: -78165
+2025-11-13 00:14:05,696 [DEBUG] [Gen 50 | Timestep 4] Prompt Length: 7 | Generated Tokens: 6483 | Reward: -43041
+2025-11-13 00:14:05,696 [DEBUG] [Gen 50 | Timestep 4] Prompt Length: 7 | Generated Tokens: 6483 | Reward: -43041
+[Gen 50 | Timestep 4] Prompt Length: 7 | Generated Tokens: 6483 | Reward: -43041
+2025-11-13 00:16:25,265 [DEBUG] [Gen 50 | Timestep 5] Prompt Length: 7 | Generated Tokens: 5155 | Reward: -51009
+2025-11-13 00:16:25,265 [DEBUG] [Gen 50 | Timestep 5] Prompt Length: 7 | Generated Tokens: 5155 | Reward: -51009
+[Gen 50 | Timestep 5] Prompt Length: 7 | Generated Tokens: 5155 | Reward: -51009
+2025-11-13 00:19:38,344 [DEBUG] [Gen 50 | Timestep 6] Prompt Length: 7 | Generated Tokens: 6684 | Reward: -41835
+2025-11-13 00:19:38,344 [DEBUG] [Gen 50 | Timestep 6] Prompt Length: 7 | Generated Tokens: 6684 | Reward: -41835
+[Gen 50 | Timestep 6] Prompt Length: 7 | Generated Tokens: 6684 | Reward: -41835
+2025-11-13 00:19:57,985 [DEBUG] [Gen 50 | Timestep 7] Prompt Length: 7 | Generated Tokens: 849 | Reward: -76845
+2025-11-13 00:19:57,985 [DEBUG] [Gen 50 | Timestep 7] Prompt Length: 7 | Generated Tokens: 849 | Reward: -76845
+[Gen 50 | Timestep 7] Prompt Length: 7 | Generated Tokens: 849 | Reward: -76845
+2025-11-13 00:23:04,930 [DEBUG] [Gen 50 | Timestep 8] Prompt Length: 7 | Generated Tokens: 6517 | Reward: -42837
+2025-11-13 00:23:04,930 [DEBUG] [Gen 50 | Timestep 8] Prompt Length: 7 | Generated Tokens: 6517 | Reward: -42837
+[Gen 50 | Timestep 8] Prompt Length: 7 | Generated Tokens: 6517 | Reward: -42837
+2025-11-13 00:26:05,841 [DEBUG] [Gen 50 | Timestep 9] Prompt Length: 7 | Generated Tokens: 6350 | Reward: -43839
+2025-11-13 00:26:05,841 [DEBUG] [Gen 50 | Timestep 9] Prompt Length: 7 | Generated Tokens: 6350 | Reward: -43839
+[Gen 50 | Timestep 9] Prompt Length: 7 | Generated Tokens: 6350 | Reward: -43839
+2025-11-13 00:29:38,733 [DEBUG] [Gen 50 | Timestep 10] Prompt Length: 7 | Generated Tokens: 7210 | Reward: -38679
+2025-11-13 00:29:38,733 [DEBUG] [Gen 50 | Timestep 10] Prompt Length: 7 | Generated Tokens: 7210 | Reward: -38679
+[Gen 50 | Timestep 10] Prompt Length: 7 | Generated Tokens: 7210 | Reward: -38679
+2025-11-13 00:40:46,193 [DEBUG] [Gen 50 | Timestep 11] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-11-13 00:40:46,193 [DEBUG] [Gen 50 | Timestep 11] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 50 | Timestep 11] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-11-13 00:40:46,193 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 00:40:46,193 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 00:43:48,114 [DEBUG] [Gen 50 | Timestep 12] Prompt Length: 7 | Generated Tokens: 6379 | Reward: -43665
+2025-11-13 00:43:48,114 [DEBUG] [Gen 50 | Timestep 12] Prompt Length: 7 | Generated Tokens: 6379 | Reward: -43665
+[Gen 50 | Timestep 12] Prompt Length: 7 | Generated Tokens: 6379 | Reward: -43665
+2025-11-13 00:47:17,325 [DEBUG] [Gen 50 | Timestep 13] Prompt Length: 7 | Generated Tokens: 7114 | Reward: -39255
+2025-11-13 00:47:17,325 [DEBUG] [Gen 50 | Timestep 13] Prompt Length: 7 | Generated Tokens: 7114 | Reward: -39255
+[Gen 50 | Timestep 13] Prompt Length: 7 | Generated Tokens: 7114 | Reward: -39255
+2025-11-13 00:51:34,439 [DEBUG] [Gen 50 | Timestep 14] Prompt Length: 7 | Generated Tokens: 8325 | Reward: -31989
+2025-11-13 00:51:34,439 [DEBUG] [Gen 50 | Timestep 14] Prompt Length: 7 | Generated Tokens: 8325 | Reward: -31989
+[Gen 50 | Timestep 14] Prompt Length: 7 | Generated Tokens: 8325 | Reward: -31989
+2025-11-13 00:51:34,439 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 00:51:34,439 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 00:59:03,818 [DEBUG] [Gen 50 | Timestep 15] Prompt Length: 7 | Generated Tokens: 12497 | Reward: -6957
+2025-11-13 00:59:03,818 [DEBUG] [Gen 50 | Timestep 15] Prompt Length: 7 | Generated Tokens: 12497 | Reward: -6957
+[Gen 50 | Timestep 15] Prompt Length: 7 | Generated Tokens: 12497 | Reward: -6957
+2025-11-13 00:59:03,818 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 00:59:03,818 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 01:03:38,746 [DEBUG] [Gen 50 | Timestep 16] Prompt Length: 7 | Generated Tokens: 8753 | Reward: -29421
+2025-11-13 01:03:38,746 [DEBUG] [Gen 50 | Timestep 16] Prompt Length: 7 | Generated Tokens: 8753 | Reward: -29421
+[Gen 50 | Timestep 16] Prompt Length: 7 | Generated Tokens: 8753 | Reward: -29421
+2025-11-13 01:03:38,747 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 01:03:38,747 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 01:05:55,525 [DEBUG] [Gen 50 | Timestep 17] Prompt Length: 7 | Generated Tokens: 5070 | Reward: -51519
+2025-11-13 01:05:55,525 [DEBUG] [Gen 50 | Timestep 17] Prompt Length: 7 | Generated Tokens: 5070 | Reward: -51519
+[Gen 50 | Timestep 17] Prompt Length: 7 | Generated Tokens: 5070 | Reward: -51519
+2025-11-13 01:08:57,081 [DEBUG] [Gen 50 | Timestep 18] Prompt Length: 7 | Generated Tokens: 6369 | Reward: -43725
+2025-11-13 01:08:57,081 [DEBUG] [Gen 50 | Timestep 18] Prompt Length: 7 | Generated Tokens: 6369 | Reward: -43725
+[Gen 50 | Timestep 18] Prompt Length: 7 | Generated Tokens: 6369 | Reward: -43725
+2025-11-13 01:15:18,777 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 01:15:18,777 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 01:15:18,800 [DEBUG] [Gen 50 | Timestep 19] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 01:15:18,800 [DEBUG] [Gen 50 | Timestep 19] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 50 | Timestep 19] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 01:15:18,800 [INFO] [Budgeted Success] after 2780 evals (offset 2740): Success@OGF≥2=0.275, Success@OGF≥4=0.075
+2025-11-13 01:15:18,800 [INFO] [Budgeted Success] after 2780 evals (offset 2740): Success@OGF≥2=0.275, Success@OGF≥4=0.075
+2025-11-13 01:15:18,800 [INFO] Generation 50 SUMMARY: {"generation": 50, "population": [{"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -52485}, {"prompt_length": 7, "reward": -78165}, {"prompt_length": 7, "reward": -43041}, {"prompt_length": 7, "reward": -51009}, {"prompt_length": 7, "reward": -41835}, {"prompt_length": 7, "reward": -76845}, {"prompt_length": 7, "reward": -42837}, {"prompt_length": 7, "reward": -43839}, {"prompt_length": 7, "reward": -38679}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -43665}, {"prompt_length": 7, "reward": -39255}, {"prompt_length": 7, "reward": -31989}, {"prompt_length": 7, "reward": -6957}, {"prompt_length": 7, "reward": -29421}, {"prompt_length": 7, "reward": -51519}, {"prompt_length": 7, "reward": -43725}, {"prompt_length": 7, "reward": -1000000.0}], "best_reward": 16372, "average_reward": -184944.8}
+2025-11-13 01:15:18,800 [INFO] Generation 50 SUMMARY: {"generation": 50, "population": [{"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -52485}, {"prompt_length": 7, "reward": -78165}, {"prompt_length": 7, "reward": -43041}, {"prompt_length": 7, "reward": -51009}, {"prompt_length": 7, "reward": -41835}, {"prompt_length": 7, "reward": -76845}, {"prompt_length": 7, "reward": -42837}, {"prompt_length": 7, "reward": -43839}, {"prompt_length": 7, "reward": -38679}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -43665}, {"prompt_length": 7, "reward": -39255}, {"prompt_length": 7, "reward": -31989}, {"prompt_length": 7, "reward": -6957}, {"prompt_length": 7, "reward": -29421}, {"prompt_length": 7, "reward": -51519}, {"prompt_length": 7, "reward": -43725}, {"prompt_length": 7, "reward": -1000000.0}], "best_reward": 16372, "average_reward": -184944.8}
+Generation 50 SUMMARY: {"generation": 50, "population": [{"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -52485}, {"prompt_length": 7, "reward": -78165}, {"prompt_length": 7, "reward": -43041}, {"prompt_length": 7, "reward": -51009}, {"prompt_length": 7, "reward": -41835}, {"prompt_length": 7, "reward": -76845}, {"prompt_length": 7, "reward": -42837}, {"prompt_length": 7, "reward": -43839}, {"prompt_length": 7, "reward": -38679}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -43665}, {"prompt_length": 7, "reward": -39255}, {"prompt_length": 7, "reward": -31989}, {"prompt_length": 7, "reward": -6957}, {"prompt_length": 7, "reward": -29421}, {"prompt_length": 7, "reward": -51519}, {"prompt_length": 7, "reward": -43725}, {"prompt_length": 7, "reward": -1000000.0}], "best_reward": 16372, "average_reward": -184944.8}
+2025-11-13 01:15:18,810 [INFO] Checkpoint saved at generation 50
+2025-11-13 01:15:18,810 [INFO] Checkpoint saved at generation 50
+2025-11-13 01:15:21,622 [DEBUG] findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0.
+2025-11-13 01:15:21,622 [DEBUG] findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0.
+2025-11-13 01:15:21,623 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-BoldItalic.ttf', name='DejaVu Serif', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,623 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-BoldItalic.ttf', name='DejaVu Serif', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,635 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmmi10.ttf', name='cmmi10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,635 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmmi10.ttf', name='cmmi10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,635 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFiveSymReg.ttf', name='STIXSizeFiveSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,635 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFiveSymReg.ttf', name='STIXSizeFiveSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,635 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniBol.ttf', name='STIXNonUnicode', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,635 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniBol.ttf', name='STIXNonUnicode', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,635 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralItalic.ttf', name='STIXGeneral', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,635 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralItalic.ttf', name='STIXGeneral', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,635 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizOneSymReg.ttf', name='STIXSizeOneSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,635 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizOneSymReg.ttf', name='STIXSizeOneSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-Italic.ttf', name='DejaVu Serif', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-Italic.ttf', name='DejaVu Serif', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizThreeSymBol.ttf', name='STIXSizeThreeSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizThreeSymBol.ttf', name='STIXSizeThreeSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmsy10.ttf', name='cmsy10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmsy10.ttf', name='cmsy10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneral.ttf', name='STIXGeneral', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneral.ttf', name='STIXGeneral', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniBolIta.ttf', name='STIXNonUnicode', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniBolIta.ttf', name='STIXNonUnicode', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-Bold.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-Bold.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUni.ttf', name='STIXNonUnicode', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUni.ttf', name='STIXNonUnicode', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralBol.ttf', name='STIXGeneral', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralBol.ttf', name='STIXGeneral', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizTwoSymReg.ttf', name='STIXSizeTwoSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizTwoSymReg.ttf', name='STIXSizeTwoSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 0.05
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 0.05
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansDisplay.ttf', name='DejaVu Sans Display', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,636 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansDisplay.ttf', name='DejaVu Sans Display', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-Bold.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-Bold.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-Oblique.ttf', name='DejaVu Sans Mono', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-Oblique.ttf', name='DejaVu Sans Mono', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmr10.ttf', name='cmr10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmr10.ttf', name='cmr10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerifDisplay.ttf', name='DejaVu Serif Display', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSerifDisplay.ttf', name='DejaVu Serif Display', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizOneSymBol.ttf', name='STIXSizeOneSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizOneSymBol.ttf', name='STIXSizeOneSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 0.33499999999999996
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 0.33499999999999996
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmex10.ttf', name='cmex10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmex10.ttf', name='cmex10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizTwoSymBol.ttf', name='STIXSizeTwoSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizTwoSymBol.ttf', name='STIXSizeTwoSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniIta.ttf', name='STIXNonUnicode', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXNonUniIta.ttf', name='STIXNonUnicode', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-BoldOblique.ttf', name='DejaVu Sans Mono', style='oblique', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-BoldOblique.ttf', name='DejaVu Sans Mono', style='oblique', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizThreeSymReg.ttf', name='STIXSizeThreeSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizThreeSymReg.ttf', name='STIXSizeThreeSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Oblique.ttf', name='DejaVu Sans', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 1.05
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Oblique.ttf', name='DejaVu Sans', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 1.05
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFourSymReg.ttf', name='STIXSizeFourSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,637 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFourSymReg.ttf', name='STIXSizeFourSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmss10.ttf', name='cmss10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmss10.ttf', name='cmss10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmtt10.ttf', name='cmtt10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmtt10.ttf', name='cmtt10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-BoldOblique.ttf', name='DejaVu Sans', style='oblique', variant='normal', weight=700, stretch='normal', size='scalable')) = 1.335
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-BoldOblique.ttf', name='DejaVu Sans', style='oblique', variant='normal', weight=700, stretch='normal', size='scalable')) = 1.335
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFourSymBol.ttf', name='STIXSizeFourSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXSizFourSymBol.ttf', name='STIXSizeFourSym', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmb10.ttf', name='cmb10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/cmb10.ttf', name='cmb10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralBolIta.ttf', name='STIXGeneral', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/STIXGeneralBolIta.ttf', name='STIXGeneral', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-Semibold.ttf', name='Open Sans', style='normal', variant='normal', weight=600, stretch='normal', size='scalable')) = 10.24
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-Semibold.ttf', name='Open Sans', style='normal', variant='normal', weight=600, stretch='normal', size='scalable')) = 10.24
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSerifCondensed-BoldItalic.ttf', name='DejaVu Serif', style='italic', variant='normal', weight=700, stretch='condensed', size='scalable')) = 11.535
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSerifCondensed-BoldItalic.ttf', name='DejaVu Serif', style='italic', variant='normal', weight=700, stretch='condensed', size='scalable')) = 11.535
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSans-Italic.otf', name='Nimbus Sans', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSans-Italic.otf', name='Nimbus Sans', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSerif.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSerif.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusMonoPS-Italic.otf', name='Nimbus Mono PS', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusMonoPS-Italic.otf', name='Nimbus Mono PS', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSerifCondensed.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=400, stretch='condensed', size='scalable')) = 10.25
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSerifCondensed.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=400, stretch='condensed', size='scalable')) = 10.25
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusRoman-Italic.otf', name='Nimbus Roman', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusRoman-Italic.otf', name='Nimbus Roman', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansDevanagari-Regular.ttf', name='Droid Sans Devanagari', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansDevanagari-Regular.ttf', name='Droid Sans Devanagari', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansHebrew-Bold.ttf', name='Droid Sans Hebrew', style='normal', variant='normal', weight=600, stretch='normal', size='scalable')) = 10.24
+2025-11-13 01:15:21,638 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansHebrew-Bold.ttf', name='Droid Sans Hebrew', style='normal', variant='normal', weight=600, stretch='normal', size='scalable')) = 10.24
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSerif-Italic.ttf', name='DejaVu Serif', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSerif-Italic.ttf', name='DejaVu Serif', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSansNarrow-Bold.otf', name='Nimbus Sans Narrow', style='normal', variant='normal', weight=700, stretch='condensed', size='scalable')) = 10.535
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSansNarrow-Bold.otf', name='Nimbus Sans Narrow', style='normal', variant='normal', weight=700, stretch='condensed', size='scalable')) = 10.535
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansGeorgian.ttf', name='Droid Sans Georgian', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansGeorgian.ttf', name='Droid Sans Georgian', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSansNarrow-BoldOblique.otf', name='Nimbus Sans Narrow', style='oblique', variant='normal', weight=700, stretch='condensed', size='scalable')) = 11.535
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSansNarrow-BoldOblique.otf', name='Nimbus Sans Narrow', style='oblique', variant='normal', weight=700, stretch='condensed', size='scalable')) = 11.535
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusMonoPS-Regular.otf', name='Nimbus Mono PS', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusMonoPS-Regular.otf', name='Nimbus Mono PS', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansTamil-Bold.ttf', name='Droid Sans Tamil', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansTamil-Bold.ttf', name='Droid Sans Tamil', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWBookman-Demi.otf', name='URW Bookman', style='normal', variant='normal', weight=600, stretch='normal', size='scalable')) = 10.24
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWBookman-Demi.otf', name='URW Bookman', style='normal', variant='normal', weight=600, stretch='normal', size='scalable')) = 10.24
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSans-Bold.ttf', name='Droid Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSans-Bold.ttf', name='Droid Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-ExtraBold.ttf', name='Open Sans', style='normal', variant='normal', weight=800, stretch='normal', size='scalable')) = 10.43
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-ExtraBold.ttf', name='Open Sans', style='normal', variant='normal', weight=800, stretch='normal', size='scalable')) = 10.43
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-Bold.ttf', name='Open Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-Bold.ttf', name='Open Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/C059-BdIta.otf', name='C059', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/C059-BdIta.otf', name='C059', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/abattis-cantarell/Cantarell-Regular.otf', name='Cantarell', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/abattis-cantarell/Cantarell-Regular.otf', name='Cantarell', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansJapanese.ttf', name='Droid Sans Japanese', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,639 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansJapanese.ttf', name='Droid Sans Japanese', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/P052-BoldItalic.otf', name='P052', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/P052-BoldItalic.otf', name='P052', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/C059-Bold.otf', name='C059', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/C059-Bold.otf', name='C059', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 0.33499999999999996
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 0.33499999999999996
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansEthiopic-Regular.ttf', name='Droid Sans Ethiopic', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansEthiopic-Regular.ttf', name='Droid Sans Ethiopic', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-SemiboldItalic.ttf', name='Open Sans', style='italic', variant='normal', weight=600, stretch='normal', size='scalable')) = 11.24
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-SemiboldItalic.ttf', name='Open Sans', style='italic', variant='normal', weight=600, stretch='normal', size='scalable')) = 11.24
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansFallback.ttf', name='Droid Sans Fallback', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansFallback.ttf', name='Droid Sans Fallback', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSansCondensed-Bold.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=700, stretch='condensed', size='scalable')) = 0.5349999999999999
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSansCondensed-Bold.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=700, stretch='condensed', size='scalable')) = 0.5349999999999999
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSans.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 0.05
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSans.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 0.05
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWBookman-DemiItalic.otf', name='URW Bookman', style='italic', variant='normal', weight=600, stretch='normal', size='scalable')) = 11.24
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWBookman-DemiItalic.otf', name='URW Bookman', style='italic', variant='normal', weight=600, stretch='normal', size='scalable')) = 11.24
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSans-Regular.otf', name='Nimbus Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSans-Regular.otf', name='Nimbus Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSerif-BoldItalic.ttf', name='DejaVu Serif', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSerif-BoldItalic.ttf', name='DejaVu Serif', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSansCondensed.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=400, stretch='condensed', size='scalable')) = 0.25
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSansCondensed.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=400, stretch='condensed', size='scalable')) = 0.25
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSansMono-BoldOblique.ttf', name='DejaVu Sans Mono', style='oblique', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSansMono-BoldOblique.ttf', name='DejaVu Sans Mono', style='oblique', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/abattis-cantarell/Cantarell-Bold.otf', name='Cantarell', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/abattis-cantarell/Cantarell-Bold.otf', name='Cantarell', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-Light.ttf', name='Open Sans', style='normal', variant='normal', weight=300, stretch='normal', size='scalable')) = 10.145
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-Light.ttf', name='Open Sans', style='normal', variant='normal', weight=300, stretch='normal', size='scalable')) = 10.145
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWBookman-LightItalic.otf', name='URW Bookman', style='italic', variant='normal', weight=300, stretch='normal', size='scalable')) = 11.145
+2025-11-13 01:15:21,640 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWBookman-LightItalic.otf', name='URW Bookman', style='italic', variant='normal', weight=300, stretch='normal', size='scalable')) = 11.145
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/P052-Bold.otf', name='P052', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/P052-Bold.otf', name='P052', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-BoldItalic.ttf', name='Open Sans', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-BoldItalic.ttf', name='Open Sans', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-LightItalic.ttf', name='Open Sans', style='italic', variant='normal', weight=300, stretch='normal', size='scalable')) = 11.145
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-LightItalic.ttf', name='Open Sans', style='italic', variant='normal', weight=300, stretch='normal', size='scalable')) = 11.145
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSansMono-Oblique.ttf', name='DejaVu Sans Mono', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSansMono-Oblique.ttf', name='DejaVu Sans Mono', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWGothic-Book.otf', name='URW Gothic', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWGothic-Book.otf', name='URW Gothic', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSans-Bold.otf', name='Nimbus Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSans-Bold.otf', name='Nimbus Sans', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSansNarrow-Oblique.otf', name='Nimbus Sans Narrow', style='oblique', variant='normal', weight=400, stretch='condensed', size='scalable')) = 11.25
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSansNarrow-Oblique.otf', name='Nimbus Sans Narrow', style='oblique', variant='normal', weight=400, stretch='condensed', size='scalable')) = 11.25
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWGothic-Demi.otf', name='URW Gothic', style='normal', variant='normal', weight=600, stretch='normal', size='scalable')) = 10.24
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWGothic-Demi.otf', name='URW Gothic', style='normal', variant='normal', weight=600, stretch='normal', size='scalable')) = 10.24
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusMonoPS-Bold.otf', name='Nimbus Mono PS', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusMonoPS-Bold.otf', name='Nimbus Mono PS', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansArmenian.ttf', name='Droid Sans Armenian', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansArmenian.ttf', name='Droid Sans Armenian', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansTamil-Regular.ttf', name='Droid Sans Tamil', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansTamil-Regular.ttf', name='Droid Sans Tamil', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-Italic.ttf', name='Open Sans', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-Italic.ttf', name='Open Sans', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansHebrew-Regular.ttf', name='Droid Sans Hebrew', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansHebrew-Regular.ttf', name='Droid Sans Hebrew', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWGothic-BookOblique.otf', name='URW Gothic', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWGothic-BookOblique.otf', name='URW Gothic', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSerif-Bold.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSerif-Bold.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSerifCondensed-Bold.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=700, stretch='condensed', size='scalable')) = 10.535
+2025-11-13 01:15:21,641 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSerifCondensed-Bold.ttf', name='DejaVu Serif', style='normal', variant='normal', weight=700, stretch='condensed', size='scalable')) = 10.535
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSerifCondensed-Italic.ttf', name='DejaVu Serif', style='italic', variant='normal', weight=400, stretch='condensed', size='scalable')) = 11.25
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSerifCondensed-Italic.ttf', name='DejaVu Serif', style='italic', variant='normal', weight=400, stretch='condensed', size='scalable')) = 11.25
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/P052-Italic.otf', name='P052', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/P052-Italic.otf', name='P052', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/C059-Roman.otf', name='C059', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/C059-Roman.otf', name='C059', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/abattis-cantarell/Cantarell-Oblique.otf', name='Cantarell', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/abattis-cantarell/Cantarell-Oblique.otf', name='Cantarell', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSans.ttf', name='Droid Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSans.ttf', name='Droid Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSansMono-Bold.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSansMono-Bold.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusMonoPS-BoldItalic.otf', name='Nimbus Mono PS', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusMonoPS-BoldItalic.otf', name='Nimbus Mono PS', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusRoman-Regular.otf', name='Nimbus Roman', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusRoman-Regular.otf', name='Nimbus Roman', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-Regular.ttf', name='Open Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-Regular.ttf', name='Open Sans', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSans-ExtraLight.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=200, stretch='normal', size='scalable')) = 0.24
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSans-ExtraLight.ttf', name='DejaVu Sans', style='normal', variant='normal', weight=200, stretch='normal', size='scalable')) = 0.24
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusRoman-BoldItalic.otf', name='Nimbus Roman', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusRoman-BoldItalic.otf', name='Nimbus Roman', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSansNarrow-Regular.otf', name='Nimbus Sans Narrow', style='normal', variant='normal', weight=400, stretch='condensed', size='scalable')) = 10.25
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSansNarrow-Regular.otf', name='Nimbus Sans Narrow', style='normal', variant='normal', weight=400, stretch='condensed', size='scalable')) = 10.25
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/C059-Italic.otf', name='C059', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/C059-Italic.otf', name='C059', style='italic', variant='normal', weight=400, stretch='normal', size='scalable')) = 11.05
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWGothic-DemiOblique.otf', name='URW Gothic', style='oblique', variant='normal', weight=600, stretch='normal', size='scalable')) = 11.24
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWGothic-DemiOblique.otf', name='URW Gothic', style='oblique', variant='normal', weight=600, stretch='normal', size='scalable')) = 11.24
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansThai.ttf', name='Droid Sans Thai', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,642 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansThai.ttf', name='Droid Sans Thai', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSans-BoldItalic.otf', name='Nimbus Sans', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusSans-BoldItalic.otf', name='Nimbus Sans', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/D050000L.otf', name='D050000L', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/D050000L.otf', name='D050000L', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/abattis-cantarell/Cantarell-BoldOblique.otf', name='Cantarell', style='oblique', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/abattis-cantarell/Cantarell-BoldOblique.otf', name='Cantarell', style='oblique', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-ExtraBoldItalic.ttf', name='Open Sans', style='italic', variant='normal', weight=800, stretch='normal', size='scalable')) = 11.43
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/open-sans/OpenSans-ExtraBoldItalic.ttf', name='Open Sans', style='italic', variant='normal', weight=800, stretch='normal', size='scalable')) = 11.43
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansArabic.ttf', name='Droid Sans Arabic', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansArabic.ttf', name='Droid Sans Arabic', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSans-Oblique.ttf', name='DejaVu Sans', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 1.05
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSans-Oblique.ttf', name='DejaVu Sans', style='oblique', variant='normal', weight=400, stretch='normal', size='scalable')) = 1.05
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSansMono.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSansMono.ttf', name='DejaVu Sans Mono', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/Z003-MediumItalic.otf', name='Z003', style='italic', variant='normal', weight=500, stretch='normal', size='scalable')) = 11.145
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/Z003-MediumItalic.otf', name='Z003', style='italic', variant='normal', weight=500, stretch='normal', size='scalable')) = 11.145
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSans-BoldOblique.ttf', name='DejaVu Sans', style='oblique', variant='normal', weight=700, stretch='normal', size='scalable')) = 1.335
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSans-BoldOblique.ttf', name='DejaVu Sans', style='oblique', variant='normal', weight=700, stretch='normal', size='scalable')) = 1.335
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSansCondensed-Oblique.ttf', name='DejaVu Sans', style='oblique', variant='normal', weight=400, stretch='condensed', size='scalable')) = 1.25
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSansCondensed-Oblique.ttf', name='DejaVu Sans', style='oblique', variant='normal', weight=400, stretch='condensed', size='scalable')) = 1.25
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansEthiopic-Bold.ttf', name='Droid Sans Ethiopic', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/google-droid/DroidSansEthiopic-Bold.ttf', name='Droid Sans Ethiopic', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSansCondensed-BoldOblique.ttf', name='DejaVu Sans', style='oblique', variant='normal', weight=700, stretch='condensed', size='scalable')) = 1.535
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/dejavu/DejaVuSansCondensed-BoldOblique.ttf', name='DejaVu Sans', style='oblique', variant='normal', weight=700, stretch='condensed', size='scalable')) = 1.535
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/P052-Roman.otf', name='P052', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/P052-Roman.otf', name='P052', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWBookman-Light.otf', name='URW Bookman', style='normal', variant='normal', weight=300, stretch='normal', size='scalable')) = 10.145
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/URWBookman-Light.otf', name='URW Bookman', style='normal', variant='normal', weight=300, stretch='normal', size='scalable')) = 10.145
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusRoman-Bold.otf', name='Nimbus Roman', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,643 [DEBUG] findfont: score(FontEntry(fname='/usr/share/fonts/urw-base35/NimbusRoman-Bold.otf', name='Nimbus Roman', style='normal', variant='normal', weight=700, stretch='normal', size='scalable')) = 10.335
+2025-11-13 01:15:21,643 [DEBUG] findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000.
+2025-11-13 01:15:21,643 [DEBUG] findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000.
+2025-11-13 01:15:21,899 [INFO] Saved budget curve: /srv/scratch/deeplearning/z3550042/DIN/EA/Llama/budget_curve_gen50.png
+2025-11-13 01:15:21,899 [INFO] Saved budget curve: /srv/scratch/deeplearning/z3550042/DIN/EA/Llama/budget_curve_gen50.png
+--- End of Generation 50 ---
+
+2025-11-13 01:15:21,900 [INFO] Generation 51 START
+2025-11-13 01:15:21,900 [INFO] Generation 51 START
+2025-11-13 01:15:28,638 [DEBUG] [Gen 51 | Timestep 0] Prompt Length: 7 | Generated Tokens: 297 | Reward: -80157
+2025-11-13 01:15:28,638 [DEBUG] [Gen 51 | Timestep 0] Prompt Length: 7 | Generated Tokens: 297 | Reward: -80157
+[Gen 51 | Timestep 0] Prompt Length: 7 | Generated Tokens: 297 | Reward: -80157
+2025-11-13 01:26:36,183 [DEBUG] [Gen 51 | Timestep 1] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-11-13 01:26:36,183 [DEBUG] [Gen 51 | Timestep 1] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 51 | Timestep 1] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-11-13 01:26:36,184 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 01:26:36,184 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 01:30:20,092 [DEBUG] [Gen 51 | Timestep 2] Prompt Length: 7 | Generated Tokens: 7494 | Reward: -36975
+2025-11-13 01:30:20,092 [DEBUG] [Gen 51 | Timestep 2] Prompt Length: 7 | Generated Tokens: 7494 | Reward: -36975
+[Gen 51 | Timestep 2] Prompt Length: 7 | Generated Tokens: 7494 | Reward: -36975
+2025-11-13 01:34:20,286 [DEBUG] [Gen 51 | Timestep 3] Prompt Length: 7 | Generated Tokens: 7905 | Reward: -34509
+2025-11-13 01:34:20,286 [DEBUG] [Gen 51 | Timestep 3] Prompt Length: 7 | Generated Tokens: 7905 | Reward: -34509
+[Gen 51 | Timestep 3] Prompt Length: 7 | Generated Tokens: 7905 | Reward: -34509
+2025-11-13 01:34:37,696 [DEBUG] [Gen 51 | Timestep 4] Prompt Length: 7 | Generated Tokens: 755 | Reward: -77409
+2025-11-13 01:34:37,696 [DEBUG] [Gen 51 | Timestep 4] Prompt Length: 7 | Generated Tokens: 755 | Reward: -77409
+[Gen 51 | Timestep 4] Prompt Length: 7 | Generated Tokens: 755 | Reward: -77409
+2025-11-13 01:37:07,977 [DEBUG] [Gen 51 | Timestep 5] Prompt Length: 7 | Generated Tokens: 5475 | Reward: -49089
+2025-11-13 01:37:07,977 [DEBUG] [Gen 51 | Timestep 5] Prompt Length: 7 | Generated Tokens: 5475 | Reward: -49089
+[Gen 51 | Timestep 5] Prompt Length: 7 | Generated Tokens: 5475 | Reward: -49089
+2025-11-13 01:40:54,902 [DEBUG] [Gen 51 | Timestep 6] Prompt Length: 7 | Generated Tokens: 7571 | Reward: -36513
+2025-11-13 01:40:54,902 [DEBUG] [Gen 51 | Timestep 6] Prompt Length: 7 | Generated Tokens: 7571 | Reward: -36513
+[Gen 51 | Timestep 6] Prompt Length: 7 | Generated Tokens: 7571 | Reward: -36513
+2025-11-13 01:48:39,479 [DEBUG] [Gen 51 | Timestep 7] Prompt Length: 7 | Generated Tokens: 12790 | Reward: -5199
+2025-11-13 01:48:39,479 [DEBUG] [Gen 51 | Timestep 7] Prompt Length: 7 | Generated Tokens: 12790 | Reward: -5199
+[Gen 51 | Timestep 7] Prompt Length: 7 | Generated Tokens: 12790 | Reward: -5199
+2025-11-13 01:48:39,480 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 01:48:39,480 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 01:51:33,465 [DEBUG] [Gen 51 | Timestep 8] Prompt Length: 7 | Generated Tokens: 6157 | Reward: -44997
+2025-11-13 01:51:33,465 [DEBUG] [Gen 51 | Timestep 8] Prompt Length: 7 | Generated Tokens: 6157 | Reward: -44997
+[Gen 51 | Timestep 8] Prompt Length: 7 | Generated Tokens: 6157 | Reward: -44997
+2025-11-13 01:54:17,815 [DEBUG] [Gen 51 | Timestep 9] Prompt Length: 7 | Generated Tokens: 5884 | Reward: -46635
+2025-11-13 01:54:17,815 [DEBUG] [Gen 51 | Timestep 9] Prompt Length: 7 | Generated Tokens: 5884 | Reward: -46635
+[Gen 51 | Timestep 9] Prompt Length: 7 | Generated Tokens: 5884 | Reward: -46635
+2025-11-13 02:05:25,349 [DEBUG] [Gen 51 | Timestep 10] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-11-13 02:05:25,349 [DEBUG] [Gen 51 | Timestep 10] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 51 | Timestep 10] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-11-13 02:05:25,351 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 02:05:25,351 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 02:09:05,209 [DEBUG] [Gen 51 | Timestep 11] Prompt Length: 7 | Generated Tokens: 7390 | Reward: -37599
+2025-11-13 02:09:05,209 [DEBUG] [Gen 51 | Timestep 11] Prompt Length: 7 | Generated Tokens: 7390 | Reward: -37599
+[Gen 51 | Timestep 11] Prompt Length: 7 | Generated Tokens: 7390 | Reward: -37599
+2025-11-13 02:11:50,144 [DEBUG] [Gen 51 | Timestep 12] Prompt Length: 7 | Generated Tokens: 5901 | Reward: -46533
+2025-11-13 02:11:50,144 [DEBUG] [Gen 51 | Timestep 12] Prompt Length: 7 | Generated Tokens: 5901 | Reward: -46533
+[Gen 51 | Timestep 12] Prompt Length: 7 | Generated Tokens: 5901 | Reward: -46533
+2025-11-13 02:22:57,707 [DEBUG] [Gen 51 | Timestep 13] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-11-13 02:22:57,707 [DEBUG] [Gen 51 | Timestep 13] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 51 | Timestep 13] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-11-13 02:22:57,708 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 02:22:57,708 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 02:30:36,565 [DEBUG] [Gen 51 | Timestep 14] Prompt Length: 7 | Generated Tokens: 12680 | Reward: -5859
+2025-11-13 02:30:36,565 [DEBUG] [Gen 51 | Timestep 14] Prompt Length: 7 | Generated Tokens: 12680 | Reward: -5859
+[Gen 51 | Timestep 14] Prompt Length: 7 | Generated Tokens: 12680 | Reward: -5859
+2025-11-13 02:30:36,575 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 02:30:36,575 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 02:41:44,126 [DEBUG] [Gen 51 | Timestep 15] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-11-13 02:41:44,126 [DEBUG] [Gen 51 | Timestep 15] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 51 | Timestep 15] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-11-13 02:41:44,128 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 02:41:44,128 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 02:44:42,646 [DEBUG] [Gen 51 | Timestep 16] Prompt Length: 7 | Generated Tokens: 6284 | Reward: -44235
+2025-11-13 02:44:42,646 [DEBUG] [Gen 51 | Timestep 16] Prompt Length: 7 | Generated Tokens: 6284 | Reward: -44235
+[Gen 51 | Timestep 16] Prompt Length: 7 | Generated Tokens: 6284 | Reward: -44235
+2025-11-13 02:51:46,561 [DEBUG] [Gen 51 | Timestep 17] Prompt Length: 7 | Generated Tokens: 11991 | Reward: -9993
+2025-11-13 02:51:46,561 [DEBUG] [Gen 51 | Timestep 17] Prompt Length: 7 | Generated Tokens: 11991 | Reward: -9993
+[Gen 51 | Timestep 17] Prompt Length: 7 | Generated Tokens: 11991 | Reward: -9993
+2025-11-13 02:51:46,563 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 02:51:46,563 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 02:55:13,006 [DEBUG] [Gen 51 | Timestep 18] Prompt Length: 7 | Generated Tokens: 7040 | Reward: -39699
+2025-11-13 02:55:13,006 [DEBUG] [Gen 51 | Timestep 18] Prompt Length: 7 | Generated Tokens: 7040 | Reward: -39699
+[Gen 51 | Timestep 18] Prompt Length: 7 | Generated Tokens: 7040 | Reward: -39699
+2025-11-13 02:58:14,742 [DEBUG] [Gen 51 | Timestep 19] Prompt Length: 7 | Generated Tokens: 6373 | Reward: -43701
+2025-11-13 02:58:14,742 [DEBUG] [Gen 51 | Timestep 19] Prompt Length: 7 | Generated Tokens: 6373 | Reward: -43701
+[Gen 51 | Timestep 19] Prompt Length: 7 | Generated Tokens: 6373 | Reward: -43701
+2025-11-13 02:58:14,743 [INFO] [Budgeted Success] after 2800 evals (offset 2740): Success@OGF≥2=0.300, Success@OGF≥4=0.117
+2025-11-13 02:58:14,743 [INFO] [Budgeted Success] after 2800 evals (offset 2740): Success@OGF≥2=0.300, Success@OGF≥4=0.117
+2025-11-13 02:58:14,743 [INFO] Generation 51 SUMMARY: {"generation": 51, "population": [{"prompt_length": 7, "reward": -80157}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -36975}, {"prompt_length": 7, "reward": -34509}, {"prompt_length": 7, "reward": -77409}, {"prompt_length": 7, "reward": -49089}, {"prompt_length": 7, "reward": -36513}, {"prompt_length": 7, "reward": -5199}, {"prompt_length": 7, "reward": -44997}, {"prompt_length": 7, "reward": -46635}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -37599}, {"prompt_length": 7, "reward": -46533}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -5859}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -44235}, {"prompt_length": 7, "reward": -9993}, {"prompt_length": 7, "reward": -39699}, {"prompt_length": 7, "reward": -43701}], "best_reward": 16372, "average_reward": -28681.1}
+2025-11-13 02:58:14,743 [INFO] Generation 51 SUMMARY: {"generation": 51, "population": [{"prompt_length": 7, "reward": -80157}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -36975}, {"prompt_length": 7, "reward": -34509}, {"prompt_length": 7, "reward": -77409}, {"prompt_length": 7, "reward": -49089}, {"prompt_length": 7, "reward": -36513}, {"prompt_length": 7, "reward": -5199}, {"prompt_length": 7, "reward": -44997}, {"prompt_length": 7, "reward": -46635}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -37599}, {"prompt_length": 7, "reward": -46533}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -5859}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -44235}, {"prompt_length": 7, "reward": -9993}, {"prompt_length": 7, "reward": -39699}, {"prompt_length": 7, "reward": -43701}], "best_reward": 16372, "average_reward": -28681.1}
+Generation 51 SUMMARY: {"generation": 51, "population": [{"prompt_length": 7, "reward": -80157}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -36975}, {"prompt_length": 7, "reward": -34509}, {"prompt_length": 7, "reward": -77409}, {"prompt_length": 7, "reward": -49089}, {"prompt_length": 7, "reward": -36513}, {"prompt_length": 7, "reward": -5199}, {"prompt_length": 7, "reward": -44997}, {"prompt_length": 7, "reward": -46635}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -37599}, {"prompt_length": 7, "reward": -46533}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -5859}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -44235}, {"prompt_length": 7, "reward": -9993}, {"prompt_length": 7, "reward": -39699}, {"prompt_length": 7, "reward": -43701}], "best_reward": 16372, "average_reward": -28681.1}
+2025-11-13 02:58:14,744 [INFO] Checkpoint saved at generation 51
+2025-11-13 02:58:14,744 [INFO] Checkpoint saved at generation 51
+--- End of Generation 51 ---
+
+2025-11-13 02:58:14,745 [INFO] Generation 52 START
+2025-11-13 02:58:14,745 [INFO] Generation 52 START
+2025-11-13 03:01:37,428 [DEBUG] [Gen 52 | Timestep 0] Prompt Length: 7 | Generated Tokens: 6940 | Reward: -40299
+2025-11-13 03:01:37,428 [DEBUG] [Gen 52 | Timestep 0] Prompt Length: 7 | Generated Tokens: 6940 | Reward: -40299
+[Gen 52 | Timestep 0] Prompt Length: 7 | Generated Tokens: 6940 | Reward: -40299
+2025-11-13 03:05:31,690 [DEBUG] [Gen 52 | Timestep 1] Prompt Length: 7 | Generated Tokens: 7757 | Reward: -35397
+2025-11-13 03:05:31,690 [DEBUG] [Gen 52 | Timestep 1] Prompt Length: 7 | Generated Tokens: 7757 | Reward: -35397
+[Gen 52 | Timestep 1] Prompt Length: 7 | Generated Tokens: 7757 | Reward: -35397
+2025-11-13 03:09:11,194 [DEBUG] [Gen 52 | Timestep 2] Prompt Length: 7 | Generated Tokens: 7381 | Reward: -37653
+2025-11-13 03:09:11,194 [DEBUG] [Gen 52 | Timestep 2] Prompt Length: 7 | Generated Tokens: 7381 | Reward: -37653
+[Gen 52 | Timestep 2] Prompt Length: 7 | Generated Tokens: 7381 | Reward: -37653
+2025-11-13 03:20:18,752 [DEBUG] [Gen 52 | Timestep 3] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-11-13 03:20:18,752 [DEBUG] [Gen 52 | Timestep 3] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 52 | Timestep 3] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-11-13 03:20:18,752 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 03:20:18,752 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 03:20:31,899 [DEBUG] [Gen 52 | Timestep 4] Prompt Length: 7 | Generated Tokens: 574 | Reward: -78495
+2025-11-13 03:20:31,899 [DEBUG] [Gen 52 | Timestep 4] Prompt Length: 7 | Generated Tokens: 574 | Reward: -78495
+[Gen 52 | Timestep 4] Prompt Length: 7 | Generated Tokens: 574 | Reward: -78495
+2025-11-13 03:22:41,881 [DEBUG] [Gen 52 | Timestep 5] Prompt Length: 7 | Generated Tokens: 4857 | Reward: -52797
+2025-11-13 03:22:41,881 [DEBUG] [Gen 52 | Timestep 5] Prompt Length: 7 | Generated Tokens: 4857 | Reward: -52797
+[Gen 52 | Timestep 5] Prompt Length: 7 | Generated Tokens: 4857 | Reward: -52797
+2025-11-13 03:26:04,288 [DEBUG] [Gen 52 | Timestep 6] Prompt Length: 7 | Generated Tokens: 6933 | Reward: -40341
+2025-11-13 03:26:04,288 [DEBUG] [Gen 52 | Timestep 6] Prompt Length: 7 | Generated Tokens: 6933 | Reward: -40341
+[Gen 52 | Timestep 6] Prompt Length: 7 | Generated Tokens: 6933 | Reward: -40341
+2025-11-13 03:29:10,379 [DEBUG] [Gen 52 | Timestep 7] Prompt Length: 7 | Generated Tokens: 6493 | Reward: -42981
+2025-11-13 03:29:10,379 [DEBUG] [Gen 52 | Timestep 7] Prompt Length: 7 | Generated Tokens: 6493 | Reward: -42981
+[Gen 52 | Timestep 7] Prompt Length: 7 | Generated Tokens: 6493 | Reward: -42981
+2025-11-13 03:32:00,852 [DEBUG] [Gen 52 | Timestep 8] Prompt Length: 7 | Generated Tokens: 6058 | Reward: -45591
+2025-11-13 03:32:00,852 [DEBUG] [Gen 52 | Timestep 8] Prompt Length: 7 | Generated Tokens: 6058 | Reward: -45591
+[Gen 52 | Timestep 8] Prompt Length: 7 | Generated Tokens: 6058 | Reward: -45591
+2025-11-13 03:41:49,434 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 03:41:49,434 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 03:41:49,437 [DEBUG] [Gen 52 | Timestep 9] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 03:41:49,437 [DEBUG] [Gen 52 | Timestep 9] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 52 | Timestep 9] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 03:45:35,258 [DEBUG] [Gen 52 | Timestep 10] Prompt Length: 7 | Generated Tokens: 7543 | Reward: -36681
+2025-11-13 03:45:35,258 [DEBUG] [Gen 52 | Timestep 10] Prompt Length: 7 | Generated Tokens: 7543 | Reward: -36681
+[Gen 52 | Timestep 10] Prompt Length: 7 | Generated Tokens: 7543 | Reward: -36681
+2025-11-13 03:48:22,646 [DEBUG] [Gen 52 | Timestep 11] Prompt Length: 7 | Generated Tokens: 5971 | Reward: -46113
+2025-11-13 03:48:22,646 [DEBUG] [Gen 52 | Timestep 11] Prompt Length: 7 | Generated Tokens: 5971 | Reward: -46113
+[Gen 52 | Timestep 11] Prompt Length: 7 | Generated Tokens: 5971 | Reward: -46113
+2025-11-13 03:50:34,807 [DEBUG] [Gen 52 | Timestep 12] Prompt Length: 7 | Generated Tokens: 4927 | Reward: -52377
+2025-11-13 03:50:34,807 [DEBUG] [Gen 52 | Timestep 12] Prompt Length: 7 | Generated Tokens: 4927 | Reward: -52377
+[Gen 52 | Timestep 12] Prompt Length: 7 | Generated Tokens: 4927 | Reward: -52377
+2025-11-13 03:54:05,439 [DEBUG] [Gen 52 | Timestep 13] Prompt Length: 7 | Generated Tokens: 7150 | Reward: -39039
+2025-11-13 03:54:05,439 [DEBUG] [Gen 52 | Timestep 13] Prompt Length: 7 | Generated Tokens: 7150 | Reward: -39039
+[Gen 52 | Timestep 13] Prompt Length: 7 | Generated Tokens: 7150 | Reward: -39039
+2025-11-13 03:56:54,844 [DEBUG] [Gen 52 | Timestep 14] Prompt Length: 7 | Generated Tokens: 6028 | Reward: -45771
+2025-11-13 03:56:54,844 [DEBUG] [Gen 52 | Timestep 14] Prompt Length: 7 | Generated Tokens: 6028 | Reward: -45771
+[Gen 52 | Timestep 14] Prompt Length: 7 | Generated Tokens: 6028 | Reward: -45771
+2025-11-13 03:59:43,970 [DEBUG] [Gen 52 | Timestep 15] Prompt Length: 7 | Generated Tokens: 6020 | Reward: -45819
+2025-11-13 03:59:43,970 [DEBUG] [Gen 52 | Timestep 15] Prompt Length: 7 | Generated Tokens: 6020 | Reward: -45819
+[Gen 52 | Timestep 15] Prompt Length: 7 | Generated Tokens: 6020 | Reward: -45819
+2025-11-13 04:06:38,726 [DEBUG] [Gen 52 | Timestep 16] Prompt Length: 7 | Generated Tokens: 11807 | Reward: -11097
+2025-11-13 04:06:38,726 [DEBUG] [Gen 52 | Timestep 16] Prompt Length: 7 | Generated Tokens: 11807 | Reward: -11097
+[Gen 52 | Timestep 16] Prompt Length: 7 | Generated Tokens: 11807 | Reward: -11097
+2025-11-13 04:06:38,728 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 04:06:38,728 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 04:09:42,300 [DEBUG] [Gen 52 | Timestep 17] Prompt Length: 7 | Generated Tokens: 6423 | Reward: -43401
+2025-11-13 04:09:42,300 [DEBUG] [Gen 52 | Timestep 17] Prompt Length: 7 | Generated Tokens: 6423 | Reward: -43401
+[Gen 52 | Timestep 17] Prompt Length: 7 | Generated Tokens: 6423 | Reward: -43401
+2025-11-13 04:12:36,597 [DEBUG] [Gen 52 | Timestep 18] Prompt Length: 7 | Generated Tokens: 6166 | Reward: -44943
+2025-11-13 04:12:36,597 [DEBUG] [Gen 52 | Timestep 18] Prompt Length: 7 | Generated Tokens: 6166 | Reward: -44943
+[Gen 52 | Timestep 18] Prompt Length: 7 | Generated Tokens: 6166 | Reward: -44943
+2025-11-13 04:17:10,413 [DEBUG] [Gen 52 | Timestep 19] Prompt Length: 7 | Generated Tokens: 8726 | Reward: -29583
+2025-11-13 04:17:10,413 [DEBUG] [Gen 52 | Timestep 19] Prompt Length: 7 | Generated Tokens: 8726 | Reward: -29583
+[Gen 52 | Timestep 19] Prompt Length: 7 | Generated Tokens: 8726 | Reward: -29583
+2025-11-13 04:17:10,413 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 04:17:10,413 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 04:17:10,413 [INFO] [Budgeted Success] after 2820 evals (offset 2740): Success@OGF≥2=0.263, Success@OGF≥4=0.100
+2025-11-13 04:17:10,413 [INFO] [Budgeted Success] after 2820 evals (offset 2740): Success@OGF≥2=0.263, Success@OGF≥4=0.100
+2025-11-13 04:17:10,413 [INFO] Generation 52 SUMMARY: {"generation": 52, "population": [{"prompt_length": 7, "reward": -40299}, {"prompt_length": 7, "reward": -35397}, {"prompt_length": 7, "reward": -37653}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -78495}, {"prompt_length": 7, "reward": -52797}, {"prompt_length": 7, "reward": -40341}, {"prompt_length": 7, "reward": -42981}, {"prompt_length": 7, "reward": -45591}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -36681}, {"prompt_length": 7, "reward": -46113}, {"prompt_length": 7, "reward": -52377}, {"prompt_length": 7, "reward": -39039}, {"prompt_length": 7, "reward": -45771}, {"prompt_length": 7, "reward": -45819}, {"prompt_length": 7, "reward": -11097}, {"prompt_length": 7, "reward": -43401}, {"prompt_length": 7, "reward": -44943}, {"prompt_length": 7, "reward": -29583}], "best_reward": 16372, "average_reward": -87600.4}
+2025-11-13 04:17:10,413 [INFO] Generation 52 SUMMARY: {"generation": 52, "population": [{"prompt_length": 7, "reward": -40299}, {"prompt_length": 7, "reward": -35397}, {"prompt_length": 7, "reward": -37653}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -78495}, {"prompt_length": 7, "reward": -52797}, {"prompt_length": 7, "reward": -40341}, {"prompt_length": 7, "reward": -42981}, {"prompt_length": 7, "reward": -45591}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -36681}, {"prompt_length": 7, "reward": -46113}, {"prompt_length": 7, "reward": -52377}, {"prompt_length": 7, "reward": -39039}, {"prompt_length": 7, "reward": -45771}, {"prompt_length": 7, "reward": -45819}, {"prompt_length": 7, "reward": -11097}, {"prompt_length": 7, "reward": -43401}, {"prompt_length": 7, "reward": -44943}, {"prompt_length": 7, "reward": -29583}], "best_reward": 16372, "average_reward": -87600.4}
+Generation 52 SUMMARY: {"generation": 52, "population": [{"prompt_length": 7, "reward": -40299}, {"prompt_length": 7, "reward": -35397}, {"prompt_length": 7, "reward": -37653}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -78495}, {"prompt_length": 7, "reward": -52797}, {"prompt_length": 7, "reward": -40341}, {"prompt_length": 7, "reward": -42981}, {"prompt_length": 7, "reward": -45591}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -36681}, {"prompt_length": 7, "reward": -46113}, {"prompt_length": 7, "reward": -52377}, {"prompt_length": 7, "reward": -39039}, {"prompt_length": 7, "reward": -45771}, {"prompt_length": 7, "reward": -45819}, {"prompt_length": 7, "reward": -11097}, {"prompt_length": 7, "reward": -43401}, {"prompt_length": 7, "reward": -44943}, {"prompt_length": 7, "reward": -29583}], "best_reward": 16372, "average_reward": -87600.4}
+2025-11-13 04:17:10,415 [INFO] Checkpoint saved at generation 52
+2025-11-13 04:17:10,415 [INFO] Checkpoint saved at generation 52
+--- End of Generation 52 ---
+
+2025-11-13 04:17:10,415 [INFO] Generation 53 START
+2025-11-13 04:17:10,415 [INFO] Generation 53 START
+2025-11-13 04:17:57,265 [DEBUG] [Gen 53 | Timestep 0] Prompt Length: 7 | Generated Tokens: 1946 | Reward: -70263
+2025-11-13 04:17:57,265 [DEBUG] [Gen 53 | Timestep 0] Prompt Length: 7 | Generated Tokens: 1946 | Reward: -70263
+[Gen 53 | Timestep 0] Prompt Length: 7 | Generated Tokens: 1946 | Reward: -70263
+2025-11-13 04:24:04,817 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 04:24:04,817 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 04:24:04,820 [DEBUG] [Gen 53 | Timestep 1] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 04:24:04,820 [DEBUG] [Gen 53 | Timestep 1] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 53 | Timestep 1] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 04:26:57,875 [DEBUG] [Gen 53 | Timestep 2] Prompt Length: 7 | Generated Tokens: 6131 | Reward: -45153
+2025-11-13 04:26:57,875 [DEBUG] [Gen 53 | Timestep 2] Prompt Length: 7 | Generated Tokens: 6131 | Reward: -45153
+[Gen 53 | Timestep 2] Prompt Length: 7 | Generated Tokens: 6131 | Reward: -45153
+2025-11-13 04:31:15,740 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 04:31:15,740 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 04:31:15,743 [DEBUG] [Gen 53 | Timestep 3] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 04:31:15,743 [DEBUG] [Gen 53 | Timestep 3] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 53 | Timestep 3] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 04:33:27,643 [DEBUG] [Gen 53 | Timestep 4] Prompt Length: 7 | Generated Tokens: 4919 | Reward: -52425
+2025-11-13 04:33:27,643 [DEBUG] [Gen 53 | Timestep 4] Prompt Length: 7 | Generated Tokens: 4919 | Reward: -52425
+[Gen 53 | Timestep 4] Prompt Length: 7 | Generated Tokens: 4919 | Reward: -52425
+2025-11-13 04:36:37,258 [DEBUG] [Gen 53 | Timestep 5] Prompt Length: 7 | Generated Tokens: 6589 | Reward: -42405
+2025-11-13 04:36:37,258 [DEBUG] [Gen 53 | Timestep 5] Prompt Length: 7 | Generated Tokens: 6589 | Reward: -42405
+[Gen 53 | Timestep 5] Prompt Length: 7 | Generated Tokens: 6589 | Reward: -42405
+2025-11-13 04:47:41,006 [DEBUG] [Gen 53 | Timestep 6] Prompt Length: 7 | Generated Tokens: 16322 | Reward: 15993
+2025-11-13 04:47:41,006 [DEBUG] [Gen 53 | Timestep 6] Prompt Length: 7 | Generated Tokens: 16322 | Reward: 15993
+[Gen 53 | Timestep 6] Prompt Length: 7 | Generated Tokens: 16322 | Reward: 15993
+2025-11-13 04:47:41,008 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 04:47:41,008 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 04:51:26,799 [DEBUG] [Gen 53 | Timestep 7] Prompt Length: 7 | Generated Tokens: 7542 | Reward: -36687
+2025-11-13 04:51:26,799 [DEBUG] [Gen 53 | Timestep 7] Prompt Length: 7 | Generated Tokens: 7542 | Reward: -36687
+[Gen 53 | Timestep 7] Prompt Length: 7 | Generated Tokens: 7542 | Reward: -36687
+2025-11-13 05:02:34,343 [DEBUG] [Gen 53 | Timestep 8] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-11-13 05:02:34,343 [DEBUG] [Gen 53 | Timestep 8] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 53 | Timestep 8] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-11-13 05:02:34,343 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 05:02:34,343 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 05:03:19,264 [DEBUG] [Gen 53 | Timestep 9] Prompt Length: 7 | Generated Tokens: 1871 | Reward: -70713
+2025-11-13 05:03:19,264 [DEBUG] [Gen 53 | Timestep 9] Prompt Length: 7 | Generated Tokens: 1871 | Reward: -70713
+[Gen 53 | Timestep 9] Prompt Length: 7 | Generated Tokens: 1871 | Reward: -70713
+2025-11-13 05:06:17,247 [DEBUG] [Gen 53 | Timestep 10] Prompt Length: 7 | Generated Tokens: 6269 | Reward: -44325
+2025-11-13 05:06:17,247 [DEBUG] [Gen 53 | Timestep 10] Prompt Length: 7 | Generated Tokens: 6269 | Reward: -44325
+[Gen 53 | Timestep 10] Prompt Length: 7 | Generated Tokens: 6269 | Reward: -44325
+2025-11-13 05:09:10,642 [DEBUG] [Gen 53 | Timestep 11] Prompt Length: 7 | Generated Tokens: 6140 | Reward: -45099
+2025-11-13 05:09:10,642 [DEBUG] [Gen 53 | Timestep 11] Prompt Length: 7 | Generated Tokens: 6140 | Reward: -45099
+[Gen 53 | Timestep 11] Prompt Length: 7 | Generated Tokens: 6140 | Reward: -45099
+2025-11-13 05:11:31,877 [DEBUG] [Gen 53 | Timestep 12] Prompt Length: 7 | Generated Tokens: 5205 | Reward: -50709
+2025-11-13 05:11:31,877 [DEBUG] [Gen 53 | Timestep 12] Prompt Length: 7 | Generated Tokens: 5205 | Reward: -50709
+[Gen 53 | Timestep 12] Prompt Length: 7 | Generated Tokens: 5205 | Reward: -50709
+2025-11-13 05:11:44,697 [DEBUG] [Gen 53 | Timestep 13] Prompt Length: 7 | Generated Tokens: 560 | Reward: -78579
+2025-11-13 05:11:44,697 [DEBUG] [Gen 53 | Timestep 13] Prompt Length: 7 | Generated Tokens: 560 | Reward: -78579
+[Gen 53 | Timestep 13] Prompt Length: 7 | Generated Tokens: 560 | Reward: -78579
+2025-11-13 05:16:11,337 [DEBUG] [Gen 53 | Timestep 14] Prompt Length: 7 | Generated Tokens: 8554 | Reward: -30615
+2025-11-13 05:16:11,337 [DEBUG] [Gen 53 | Timestep 14] Prompt Length: 7 | Generated Tokens: 8554 | Reward: -30615
+[Gen 53 | Timestep 14] Prompt Length: 7 | Generated Tokens: 8554 | Reward: -30615
+2025-11-13 05:16:11,338 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 05:16:11,338 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 05:20:37,719 [DEBUG] [Gen 53 | Timestep 15] Prompt Length: 7 | Generated Tokens: 8548 | Reward: -30651
+2025-11-13 05:20:37,719 [DEBUG] [Gen 53 | Timestep 15] Prompt Length: 7 | Generated Tokens: 8548 | Reward: -30651
+[Gen 53 | Timestep 15] Prompt Length: 7 | Generated Tokens: 8548 | Reward: -30651
+2025-11-13 05:20:37,719 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 05:20:37,719 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 05:26:28,004 [DEBUG] [Gen 53 | Timestep 16] Prompt Length: 7 | Generated Tokens: 10458 | Reward: -19191
+2025-11-13 05:26:28,004 [DEBUG] [Gen 53 | Timestep 16] Prompt Length: 7 | Generated Tokens: 10458 | Reward: -19191
+[Gen 53 | Timestep 16] Prompt Length: 7 | Generated Tokens: 10458 | Reward: -19191
+2025-11-13 05:26:28,005 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 05:26:28,005 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 05:29:50,087 [DEBUG] [Gen 53 | Timestep 17] Prompt Length: 7 | Generated Tokens: 6923 | Reward: -40401
+2025-11-13 05:29:50,087 [DEBUG] [Gen 53 | Timestep 17] Prompt Length: 7 | Generated Tokens: 6923 | Reward: -40401
+[Gen 53 | Timestep 17] Prompt Length: 7 | Generated Tokens: 6923 | Reward: -40401
+2025-11-13 05:33:48,471 [DEBUG] [Gen 53 | Timestep 18] Prompt Length: 7 | Generated Tokens: 7861 | Reward: -34773
+2025-11-13 05:33:48,471 [DEBUG] [Gen 53 | Timestep 18] Prompt Length: 7 | Generated Tokens: 7861 | Reward: -34773
+[Gen 53 | Timestep 18] Prompt Length: 7 | Generated Tokens: 7861 | Reward: -34773
+2025-11-13 05:33:57,185 [DEBUG] [Gen 53 | Timestep 19] Prompt Length: 7 | Generated Tokens: 383 | Reward: -79641
+2025-11-13 05:33:57,185 [DEBUG] [Gen 53 | Timestep 19] Prompt Length: 7 | Generated Tokens: 383 | Reward: -79641
+[Gen 53 | Timestep 19] Prompt Length: 7 | Generated Tokens: 383 | Reward: -79641
+2025-11-13 05:33:57,185 [INFO] [Budgeted Success] after 2840 evals (offset 2740): Success@OGF≥2=0.260, Success@OGF≥4=0.090
+2025-11-13 05:33:57,185 [INFO] [Budgeted Success] after 2840 evals (offset 2740): Success@OGF≥2=0.260, Success@OGF≥4=0.090
+2025-11-13 05:33:57,186 [INFO] Generation 53 SUMMARY: {"generation": 53, "population": [{"prompt_length": 7, "reward": -70263}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -45153}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -52425}, {"prompt_length": 7, "reward": -42405}, {"prompt_length": 7, "reward": 15993}, {"prompt_length": 7, "reward": -36687}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -70713}, {"prompt_length": 7, "reward": -44325}, {"prompt_length": 7, "reward": -45099}, {"prompt_length": 7, "reward": -50709}, {"prompt_length": 7, "reward": -78579}, {"prompt_length": 7, "reward": -30615}, {"prompt_length": 7, "reward": -30651}, {"prompt_length": 7, "reward": -19191}, {"prompt_length": 7, "reward": -40401}, {"prompt_length": 7, "reward": -34773}, {"prompt_length": 7, "reward": -79641}], "best_reward": 16372, "average_reward": -136963.35}
+2025-11-13 05:33:57,186 [INFO] Generation 53 SUMMARY: {"generation": 53, "population": [{"prompt_length": 7, "reward": -70263}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -45153}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -52425}, {"prompt_length": 7, "reward": -42405}, {"prompt_length": 7, "reward": 15993}, {"prompt_length": 7, "reward": -36687}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -70713}, {"prompt_length": 7, "reward": -44325}, {"prompt_length": 7, "reward": -45099}, {"prompt_length": 7, "reward": -50709}, {"prompt_length": 7, "reward": -78579}, {"prompt_length": 7, "reward": -30615}, {"prompt_length": 7, "reward": -30651}, {"prompt_length": 7, "reward": -19191}, {"prompt_length": 7, "reward": -40401}, {"prompt_length": 7, "reward": -34773}, {"prompt_length": 7, "reward": -79641}], "best_reward": 16372, "average_reward": -136963.35}
+Generation 53 SUMMARY: {"generation": 53, "population": [{"prompt_length": 7, "reward": -70263}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -45153}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -52425}, {"prompt_length": 7, "reward": -42405}, {"prompt_length": 7, "reward": 15993}, {"prompt_length": 7, "reward": -36687}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -70713}, {"prompt_length": 7, "reward": -44325}, {"prompt_length": 7, "reward": -45099}, {"prompt_length": 7, "reward": -50709}, {"prompt_length": 7, "reward": -78579}, {"prompt_length": 7, "reward": -30615}, {"prompt_length": 7, "reward": -30651}, {"prompt_length": 7, "reward": -19191}, {"prompt_length": 7, "reward": -40401}, {"prompt_length": 7, "reward": -34773}, {"prompt_length": 7, "reward": -79641}], "best_reward": 16372, "average_reward": -136963.35}
+2025-11-13 05:33:57,187 [INFO] Checkpoint saved at generation 53
+2025-11-13 05:33:57,187 [INFO] Checkpoint saved at generation 53
+--- End of Generation 53 ---
+
+2025-11-13 05:33:57,187 [INFO] Generation 54 START
+2025-11-13 05:33:57,187 [INFO] Generation 54 START
+2025-11-13 05:45:04,712 [DEBUG] [Gen 54 | Timestep 0] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-11-13 05:45:04,712 [DEBUG] [Gen 54 | Timestep 0] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 54 | Timestep 0] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-11-13 05:45:04,712 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 05:45:04,712 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 05:48:34,663 [DEBUG] [Gen 54 | Timestep 1] Prompt Length: 7 | Generated Tokens: 7132 | Reward: -39147
+2025-11-13 05:48:34,663 [DEBUG] [Gen 54 | Timestep 1] Prompt Length: 7 | Generated Tokens: 7132 | Reward: -39147
+[Gen 54 | Timestep 1] Prompt Length: 7 | Generated Tokens: 7132 | Reward: -39147
+2025-11-13 05:48:48,161 [DEBUG] [Gen 54 | Timestep 2] Prompt Length: 7 | Generated Tokens: 589 | Reward: -78405
+2025-11-13 05:48:48,161 [DEBUG] [Gen 54 | Timestep 2] Prompt Length: 7 | Generated Tokens: 589 | Reward: -78405
+[Gen 54 | Timestep 2] Prompt Length: 7 | Generated Tokens: 589 | Reward: -78405
+2025-11-13 05:48:50,932 [DEBUG] [Gen 54 | Timestep 3] Prompt Length: 7 | Generated Tokens: 123 | Reward: -81201
+2025-11-13 05:48:50,932 [DEBUG] [Gen 54 | Timestep 3] Prompt Length: 7 | Generated Tokens: 123 | Reward: -81201
+[Gen 54 | Timestep 3] Prompt Length: 7 | Generated Tokens: 123 | Reward: -81201
+2025-11-13 05:58:06,708 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 05:58:06,708 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 05:58:06,711 [DEBUG] [Gen 54 | Timestep 4] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 05:58:06,711 [DEBUG] [Gen 54 | Timestep 4] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 54 | Timestep 4] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 06:01:04,566 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 06:01:04,566 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 06:01:04,569 [DEBUG] [Gen 54 | Timestep 5] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 06:01:04,569 [DEBUG] [Gen 54 | Timestep 5] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 54 | Timestep 5] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 06:12:12,104 [DEBUG] [Gen 54 | Timestep 6] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-11-13 06:12:12,104 [DEBUG] [Gen 54 | Timestep 6] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 54 | Timestep 6] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-11-13 06:12:12,105 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 06:12:12,105 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 06:16:21,510 [DEBUG] [Gen 54 | Timestep 7] Prompt Length: 7 | Generated Tokens: 8135 | Reward: -33129
+2025-11-13 06:16:21,510 [DEBUG] [Gen 54 | Timestep 7] Prompt Length: 7 | Generated Tokens: 8135 | Reward: -33129
+[Gen 54 | Timestep 7] Prompt Length: 7 | Generated Tokens: 8135 | Reward: -33129
+2025-11-13 06:18:31,283 [DEBUG] [Gen 54 | Timestep 8] Prompt Length: 7 | Generated Tokens: 4853 | Reward: -52821
+2025-11-13 06:18:31,283 [DEBUG] [Gen 54 | Timestep 8] Prompt Length: 7 | Generated Tokens: 4853 | Reward: -52821
+[Gen 54 | Timestep 8] Prompt Length: 7 | Generated Tokens: 4853 | Reward: -52821
+2025-11-13 06:25:06,002 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 06:25:06,002 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 06:25:06,005 [DEBUG] [Gen 54 | Timestep 9] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 06:25:06,005 [DEBUG] [Gen 54 | Timestep 9] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 54 | Timestep 9] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 06:27:28,046 [DEBUG] [Gen 54 | Timestep 10] Prompt Length: 7 | Generated Tokens: 5229 | Reward: -50565
+2025-11-13 06:27:28,046 [DEBUG] [Gen 54 | Timestep 10] Prompt Length: 7 | Generated Tokens: 5229 | Reward: -50565
+[Gen 54 | Timestep 10] Prompt Length: 7 | Generated Tokens: 5229 | Reward: -50565
+2025-11-13 06:30:17,972 [DEBUG] [Gen 54 | Timestep 11] Prompt Length: 7 | Generated Tokens: 6043 | Reward: -45681
+2025-11-13 06:30:17,972 [DEBUG] [Gen 54 | Timestep 11] Prompt Length: 7 | Generated Tokens: 6043 | Reward: -45681
+[Gen 54 | Timestep 11] Prompt Length: 7 | Generated Tokens: 6043 | Reward: -45681
+2025-11-13 06:33:56,404 [DEBUG] [Gen 54 | Timestep 12] Prompt Length: 7 | Generated Tokens: 7353 | Reward: -37821
+2025-11-13 06:33:56,404 [DEBUG] [Gen 54 | Timestep 12] Prompt Length: 7 | Generated Tokens: 7353 | Reward: -37821
+[Gen 54 | Timestep 12] Prompt Length: 7 | Generated Tokens: 7353 | Reward: -37821
+2025-11-13 06:34:01,174 [DEBUG] [Gen 54 | Timestep 13] Prompt Length: 7 | Generated Tokens: 211 | Reward: -80673
+2025-11-13 06:34:01,174 [DEBUG] [Gen 54 | Timestep 13] Prompt Length: 7 | Generated Tokens: 211 | Reward: -80673
+[Gen 54 | Timestep 13] Prompt Length: 7 | Generated Tokens: 211 | Reward: -80673
+2025-11-13 06:37:57,644 [DEBUG] [Gen 54 | Timestep 14] Prompt Length: 7 | Generated Tokens: 7813 | Reward: -35061
+2025-11-13 06:37:57,644 [DEBUG] [Gen 54 | Timestep 14] Prompt Length: 7 | Generated Tokens: 7813 | Reward: -35061
+[Gen 54 | Timestep 14] Prompt Length: 7 | Generated Tokens: 7813 | Reward: -35061
+2025-11-13 06:40:38,852 [DEBUG] [Gen 54 | Timestep 15] Prompt Length: 7 | Generated Tokens: 5794 | Reward: -47175
+2025-11-13 06:40:38,852 [DEBUG] [Gen 54 | Timestep 15] Prompt Length: 7 | Generated Tokens: 5794 | Reward: -47175
+[Gen 54 | Timestep 15] Prompt Length: 7 | Generated Tokens: 5794 | Reward: -47175
+2025-11-13 06:43:56,454 [DEBUG] [Gen 54 | Timestep 16] Prompt Length: 7 | Generated Tokens: 6805 | Reward: -41109
+2025-11-13 06:43:56,454 [DEBUG] [Gen 54 | Timestep 16] Prompt Length: 7 | Generated Tokens: 6805 | Reward: -41109
+[Gen 54 | Timestep 16] Prompt Length: 7 | Generated Tokens: 6805 | Reward: -41109
+2025-11-13 06:46:57,848 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 06:46:57,848 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 06:46:57,851 [DEBUG] [Gen 54 | Timestep 17] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 06:46:57,851 [DEBUG] [Gen 54 | Timestep 17] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 54 | Timestep 17] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 06:51:17,605 [DEBUG] [Gen 54 | Timestep 18] Prompt Length: 7 | Generated Tokens: 8388 | Reward: -31611
+2025-11-13 06:51:17,605 [DEBUG] [Gen 54 | Timestep 18] Prompt Length: 7 | Generated Tokens: 8388 | Reward: -31611
+[Gen 54 | Timestep 18] Prompt Length: 7 | Generated Tokens: 8388 | Reward: -31611
+2025-11-13 06:51:17,605 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 06:51:17,605 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 06:55:10,028 [DEBUG] [Gen 54 | Timestep 19] Prompt Length: 7 | Generated Tokens: 7711 | Reward: -35673
+2025-11-13 06:55:10,028 [DEBUG] [Gen 54 | Timestep 19] Prompt Length: 7 | Generated Tokens: 7711 | Reward: -35673
+[Gen 54 | Timestep 19] Prompt Length: 7 | Generated Tokens: 7711 | Reward: -35673
+2025-11-13 06:55:10,028 [INFO] [Budgeted Success] after 2860 evals (offset 2740): Success@OGF≥2=0.242, Success@OGF≥4=0.092
+2025-11-13 06:55:10,028 [INFO] [Budgeted Success] after 2860 evals (offset 2740): Success@OGF≥2=0.242, Success@OGF≥4=0.092
+2025-11-13 06:55:10,029 [INFO] Generation 54 SUMMARY: {"generation": 54, "population": [{"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -39147}, {"prompt_length": 7, "reward": -78405}, {"prompt_length": 7, "reward": -81201}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -33129}, {"prompt_length": 7, "reward": -52821}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -50565}, {"prompt_length": 7, "reward": -45681}, {"prompt_length": 7, "reward": -37821}, {"prompt_length": 7, "reward": -80673}, {"prompt_length": 7, "reward": -35061}, {"prompt_length": 7, "reward": -47175}, {"prompt_length": 7, "reward": -41109}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -31611}, {"prompt_length": 7, "reward": -35673}], "best_reward": 16372, "average_reward": -232866.6}
+2025-11-13 06:55:10,029 [INFO] Generation 54 SUMMARY: {"generation": 54, "population": [{"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -39147}, {"prompt_length": 7, "reward": -78405}, {"prompt_length": 7, "reward": -81201}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -33129}, {"prompt_length": 7, "reward": -52821}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -50565}, {"prompt_length": 7, "reward": -45681}, {"prompt_length": 7, "reward": -37821}, {"prompt_length": 7, "reward": -80673}, {"prompt_length": 7, "reward": -35061}, {"prompt_length": 7, "reward": -47175}, {"prompt_length": 7, "reward": -41109}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -31611}, {"prompt_length": 7, "reward": -35673}], "best_reward": 16372, "average_reward": -232866.6}
+Generation 54 SUMMARY: {"generation": 54, "population": [{"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -39147}, {"prompt_length": 7, "reward": -78405}, {"prompt_length": 7, "reward": -81201}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -33129}, {"prompt_length": 7, "reward": -52821}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -50565}, {"prompt_length": 7, "reward": -45681}, {"prompt_length": 7, "reward": -37821}, {"prompt_length": 7, "reward": -80673}, {"prompt_length": 7, "reward": -35061}, {"prompt_length": 7, "reward": -47175}, {"prompt_length": 7, "reward": -41109}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -31611}, {"prompt_length": 7, "reward": -35673}], "best_reward": 16372, "average_reward": -232866.6}
+2025-11-13 06:55:10,030 [INFO] Checkpoint saved at generation 54
+2025-11-13 06:55:10,030 [INFO] Checkpoint saved at generation 54
+--- End of Generation 54 ---
+
+2025-11-13 06:55:10,030 [INFO] Generation 55 START
+2025-11-13 06:55:10,030 [INFO] Generation 55 START
+2025-11-13 06:58:53,859 [DEBUG] [Gen 55 | Timestep 0] Prompt Length: 7 | Generated Tokens: 7492 | Reward: -36987
+2025-11-13 06:58:53,859 [DEBUG] [Gen 55 | Timestep 0] Prompt Length: 7 | Generated Tokens: 7492 | Reward: -36987
+[Gen 55 | Timestep 0] Prompt Length: 7 | Generated Tokens: 7492 | Reward: -36987
+2025-11-13 07:04:46,128 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 07:04:46,128 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 07:04:46,131 [DEBUG] [Gen 55 | Timestep 1] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 07:04:46,131 [DEBUG] [Gen 55 | Timestep 1] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 55 | Timestep 1] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 07:08:00,809 [DEBUG] [Gen 55 | Timestep 2] Prompt Length: 7 | Generated Tokens: 6726 | Reward: -41583
+2025-11-13 07:08:00,809 [DEBUG] [Gen 55 | Timestep 2] Prompt Length: 7 | Generated Tokens: 6726 | Reward: -41583
+[Gen 55 | Timestep 2] Prompt Length: 7 | Generated Tokens: 6726 | Reward: -41583
+2025-11-13 07:10:36,159 [DEBUG] [Gen 55 | Timestep 3] Prompt Length: 7 | Generated Tokens: 5624 | Reward: -48195
+2025-11-13 07:10:36,159 [DEBUG] [Gen 55 | Timestep 3] Prompt Length: 7 | Generated Tokens: 5624 | Reward: -48195
+[Gen 55 | Timestep 3] Prompt Length: 7 | Generated Tokens: 5624 | Reward: -48195
+2025-11-13 07:14:07,351 [DEBUG] [Gen 55 | Timestep 4] Prompt Length: 7 | Generated Tokens: 7165 | Reward: -38949
+2025-11-13 07:14:07,351 [DEBUG] [Gen 55 | Timestep 4] Prompt Length: 7 | Generated Tokens: 7165 | Reward: -38949
+[Gen 55 | Timestep 4] Prompt Length: 7 | Generated Tokens: 7165 | Reward: -38949
+2025-11-13 07:17:23,685 [DEBUG] [Gen 55 | Timestep 5] Prompt Length: 7 | Generated Tokens: 6771 | Reward: -41313
+2025-11-13 07:17:23,685 [DEBUG] [Gen 55 | Timestep 5] Prompt Length: 7 | Generated Tokens: 6771 | Reward: -41313
+[Gen 55 | Timestep 5] Prompt Length: 7 | Generated Tokens: 6771 | Reward: -41313
+2025-11-13 07:19:47,141 [DEBUG] [Gen 55 | Timestep 6] Prompt Length: 7 | Generated Tokens: 5272 | Reward: -50307
+2025-11-13 07:19:47,141 [DEBUG] [Gen 55 | Timestep 6] Prompt Length: 7 | Generated Tokens: 5272 | Reward: -50307
+[Gen 55 | Timestep 6] Prompt Length: 7 | Generated Tokens: 5272 | Reward: -50307
+2025-11-13 07:22:39,256 [DEBUG] [Gen 55 | Timestep 7] Prompt Length: 7 | Generated Tokens: 6105 | Reward: -45309
+2025-11-13 07:22:39,256 [DEBUG] [Gen 55 | Timestep 7] Prompt Length: 7 | Generated Tokens: 6105 | Reward: -45309
+[Gen 55 | Timestep 7] Prompt Length: 7 | Generated Tokens: 6105 | Reward: -45309
+2025-11-13 07:26:12,307 [DEBUG] [Gen 55 | Timestep 8] Prompt Length: 7 | Generated Tokens: 7214 | Reward: -38655
+2025-11-13 07:26:12,307 [DEBUG] [Gen 55 | Timestep 8] Prompt Length: 7 | Generated Tokens: 7214 | Reward: -38655
+[Gen 55 | Timestep 8] Prompt Length: 7 | Generated Tokens: 7214 | Reward: -38655
+2025-11-13 07:31:42,175 [DEBUG] [Gen 55 | Timestep 9] Prompt Length: 7 | Generated Tokens: 10012 | Reward: -21867
+2025-11-13 07:31:42,175 [DEBUG] [Gen 55 | Timestep 9] Prompt Length: 7 | Generated Tokens: 10012 | Reward: -21867
+[Gen 55 | Timestep 9] Prompt Length: 7 | Generated Tokens: 10012 | Reward: -21867
+2025-11-13 07:31:42,176 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 07:31:42,176 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 07:40:34,622 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 07:40:34,622 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 07:40:34,625 [DEBUG] [Gen 55 | Timestep 10] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 07:40:34,625 [DEBUG] [Gen 55 | Timestep 10] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 55 | Timestep 10] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 07:47:01,301 [DEBUG] [Gen 55 | Timestep 11] Prompt Length: 7 | Generated Tokens: 11231 | Reward: -14553
+2025-11-13 07:47:01,301 [DEBUG] [Gen 55 | Timestep 11] Prompt Length: 7 | Generated Tokens: 11231 | Reward: -14553
+[Gen 55 | Timestep 11] Prompt Length: 7 | Generated Tokens: 11231 | Reward: -14553
+2025-11-13 07:47:01,303 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 07:47:01,303 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 07:50:39,672 [DEBUG] [Gen 55 | Timestep 12] Prompt Length: 7 | Generated Tokens: 7352 | Reward: -37827
+2025-11-13 07:50:39,672 [DEBUG] [Gen 55 | Timestep 12] Prompt Length: 7 | Generated Tokens: 7352 | Reward: -37827
+[Gen 55 | Timestep 12] Prompt Length: 7 | Generated Tokens: 7352 | Reward: -37827
+2025-11-13 07:53:57,476 [DEBUG] [Gen 55 | Timestep 13] Prompt Length: 7 | Generated Tokens: 6810 | Reward: -41079
+2025-11-13 07:53:57,476 [DEBUG] [Gen 55 | Timestep 13] Prompt Length: 7 | Generated Tokens: 6810 | Reward: -41079
+[Gen 55 | Timestep 13] Prompt Length: 7 | Generated Tokens: 6810 | Reward: -41079
+2025-11-13 07:53:57,547 [DEBUG] [Gen 55 | Timestep 14] Prompt Length: 7 | Generated Tokens: 3 | Reward: -81921
+2025-11-13 07:53:57,547 [DEBUG] [Gen 55 | Timestep 14] Prompt Length: 7 | Generated Tokens: 3 | Reward: -81921
+[Gen 55 | Timestep 14] Prompt Length: 7 | Generated Tokens: 3 | Reward: -81921
+2025-11-13 07:56:59,416 [DEBUG] [Gen 55 | Timestep 15] Prompt Length: 7 | Generated Tokens: 6377 | Reward: -43677
+2025-11-13 07:56:59,416 [DEBUG] [Gen 55 | Timestep 15] Prompt Length: 7 | Generated Tokens: 6377 | Reward: -43677
+[Gen 55 | Timestep 15] Prompt Length: 7 | Generated Tokens: 6377 | Reward: -43677
+2025-11-13 08:00:04,412 [DEBUG] [Gen 55 | Timestep 16] Prompt Length: 7 | Generated Tokens: 6463 | Reward: -43161
+2025-11-13 08:00:04,412 [DEBUG] [Gen 55 | Timestep 16] Prompt Length: 7 | Generated Tokens: 6463 | Reward: -43161
+[Gen 55 | Timestep 16] Prompt Length: 7 | Generated Tokens: 6463 | Reward: -43161
+2025-11-13 08:03:47,612 [DEBUG] [Gen 55 | Timestep 17] Prompt Length: 7 | Generated Tokens: 7476 | Reward: -37083
+2025-11-13 08:03:47,612 [DEBUG] [Gen 55 | Timestep 17] Prompt Length: 7 | Generated Tokens: 7476 | Reward: -37083
+[Gen 55 | Timestep 17] Prompt Length: 7 | Generated Tokens: 7476 | Reward: -37083
+2025-11-13 08:06:39,029 [DEBUG] [Gen 55 | Timestep 18] Prompt Length: 7 | Generated Tokens: 6084 | Reward: -45435
+2025-11-13 08:06:39,029 [DEBUG] [Gen 55 | Timestep 18] Prompt Length: 7 | Generated Tokens: 6084 | Reward: -45435
+[Gen 55 | Timestep 18] Prompt Length: 7 | Generated Tokens: 6084 | Reward: -45435
+2025-11-13 08:12:20,758 [DEBUG] [Gen 55 | Timestep 19] Prompt Length: 7 | Generated Tokens: 10273 | Reward: -20301
+2025-11-13 08:12:20,758 [DEBUG] [Gen 55 | Timestep 19] Prompt Length: 7 | Generated Tokens: 10273 | Reward: -20301
+[Gen 55 | Timestep 19] Prompt Length: 7 | Generated Tokens: 10273 | Reward: -20301
+2025-11-13 08:12:20,760 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 08:12:20,760 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 08:12:20,760 [INFO] [Budgeted Success] after 2880 evals (offset 2740): Success@OGF≥2=0.229, Success@OGF≥4=0.079
+2025-11-13 08:12:20,760 [INFO] [Budgeted Success] after 2880 evals (offset 2740): Success@OGF≥2=0.229, Success@OGF≥4=0.079
+2025-11-13 08:12:20,760 [INFO] Generation 55 SUMMARY: {"generation": 55, "population": [{"prompt_length": 7, "reward": -36987}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -41583}, {"prompt_length": 7, "reward": -48195}, {"prompt_length": 7, "reward": -38949}, {"prompt_length": 7, "reward": -41313}, {"prompt_length": 7, "reward": -50307}, {"prompt_length": 7, "reward": -45309}, {"prompt_length": 7, "reward": -38655}, {"prompt_length": 7, "reward": -21867}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -14553}, {"prompt_length": 7, "reward": -37827}, {"prompt_length": 7, "reward": -41079}, {"prompt_length": 7, "reward": -81921}, {"prompt_length": 7, "reward": -43677}, {"prompt_length": 7, "reward": -43161}, {"prompt_length": 7, "reward": -37083}, {"prompt_length": 7, "reward": -45435}, {"prompt_length": 7, "reward": -20301}], "best_reward": 16372, "average_reward": -136410.1}
+2025-11-13 08:12:20,760 [INFO] Generation 55 SUMMARY: {"generation": 55, "population": [{"prompt_length": 7, "reward": -36987}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -41583}, {"prompt_length": 7, "reward": -48195}, {"prompt_length": 7, "reward": -38949}, {"prompt_length": 7, "reward": -41313}, {"prompt_length": 7, "reward": -50307}, {"prompt_length": 7, "reward": -45309}, {"prompt_length": 7, "reward": -38655}, {"prompt_length": 7, "reward": -21867}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -14553}, {"prompt_length": 7, "reward": -37827}, {"prompt_length": 7, "reward": -41079}, {"prompt_length": 7, "reward": -81921}, {"prompt_length": 7, "reward": -43677}, {"prompt_length": 7, "reward": -43161}, {"prompt_length": 7, "reward": -37083}, {"prompt_length": 7, "reward": -45435}, {"prompt_length": 7, "reward": -20301}], "best_reward": 16372, "average_reward": -136410.1}
+Generation 55 SUMMARY: {"generation": 55, "population": [{"prompt_length": 7, "reward": -36987}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -41583}, {"prompt_length": 7, "reward": -48195}, {"prompt_length": 7, "reward": -38949}, {"prompt_length": 7, "reward": -41313}, {"prompt_length": 7, "reward": -50307}, {"prompt_length": 7, "reward": -45309}, {"prompt_length": 7, "reward": -38655}, {"prompt_length": 7, "reward": -21867}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -14553}, {"prompt_length": 7, "reward": -37827}, {"prompt_length": 7, "reward": -41079}, {"prompt_length": 7, "reward": -81921}, {"prompt_length": 7, "reward": -43677}, {"prompt_length": 7, "reward": -43161}, {"prompt_length": 7, "reward": -37083}, {"prompt_length": 7, "reward": -45435}, {"prompt_length": 7, "reward": -20301}], "best_reward": 16372, "average_reward": -136410.1}
+2025-11-13 08:12:20,761 [INFO] Checkpoint saved at generation 55
+2025-11-13 08:12:20,761 [INFO] Checkpoint saved at generation 55
+--- End of Generation 55 ---
+
+2025-11-13 08:12:20,762 [INFO] Generation 56 START
+2025-11-13 08:12:20,762 [INFO] Generation 56 START
+2025-11-13 08:19:23,678 [DEBUG] [Gen 56 | Timestep 0] Prompt Length: 7 | Generated Tokens: 11972 | Reward: -10107
+2025-11-13 08:19:23,678 [DEBUG] [Gen 56 | Timestep 0] Prompt Length: 7 | Generated Tokens: 11972 | Reward: -10107
+[Gen 56 | Timestep 0] Prompt Length: 7 | Generated Tokens: 11972 | Reward: -10107
+2025-11-13 08:19:23,678 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 08:19:23,678 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-11-13 08:22:34,338 [DEBUG] [Gen 56 | Timestep 1] Prompt Length: 7 | Generated Tokens: 6617 | Reward: -42237
+2025-11-13 08:22:34,338 [DEBUG] [Gen 56 | Timestep 1] Prompt Length: 7 | Generated Tokens: 6617 | Reward: -42237
+[Gen 56 | Timestep 1] Prompt Length: 7 | Generated Tokens: 6617 | Reward: -42237
+2025-11-13 08:25:15,019 [DEBUG] [Gen 56 | Timestep 2] Prompt Length: 7 | Generated Tokens: 5779 | Reward: -47265
+2025-11-13 08:25:15,019 [DEBUG] [Gen 56 | Timestep 2] Prompt Length: 7 | Generated Tokens: 5779 | Reward: -47265
+[Gen 56 | Timestep 2] Prompt Length: 7 | Generated Tokens: 5779 | Reward: -47265
+2025-11-13 08:25:18,200 [DEBUG] [Gen 56 | Timestep 3] Prompt Length: 7 | Generated Tokens: 141 | Reward: -81093
+2025-11-13 08:25:18,200 [DEBUG] [Gen 56 | Timestep 3] Prompt Length: 7 | Generated Tokens: 141 | Reward: -81093
+[Gen 56 | Timestep 3] Prompt Length: 7 | Generated Tokens: 141 | Reward: -81093
+2025-11-13 08:28:39,354 [DEBUG] [Gen 56 | Timestep 4] Prompt Length: 7 | Generated Tokens: 6900 | Reward: -40539
+2025-11-13 08:28:39,354 [DEBUG] [Gen 56 | Timestep 4] Prompt Length: 7 | Generated Tokens: 6900 | Reward: -40539
+[Gen 56 | Timestep 4] Prompt Length: 7 | Generated Tokens: 6900 | Reward: -40539
+2025-11-13 08:29:11,565 [DEBUG] [Gen 56 | Timestep 5] Prompt Length: 7 | Generated Tokens: 1366 | Reward: -73743
+2025-11-13 08:29:11,565 [DEBUG] [Gen 56 | Timestep 5] Prompt Length: 7 | Generated Tokens: 1366 | Reward: -73743
+[Gen 56 | Timestep 5] Prompt Length: 7 | Generated Tokens: 1366 | Reward: -73743
+2025-11-13 08:34:53,893 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 08:34:53,893 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 08:34:53,896 [DEBUG] [Gen 56 | Timestep 6] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 08:34:53,896 [DEBUG] [Gen 56 | Timestep 6] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 56 | Timestep 6] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 08:37:24,647 [DEBUG] [Gen 56 | Timestep 7] Prompt Length: 7 | Generated Tokens: 5489 | Reward: -49005
+2025-11-13 08:37:24,647 [DEBUG] [Gen 56 | Timestep 7] Prompt Length: 7 | Generated Tokens: 5489 | Reward: -49005
+[Gen 56 | Timestep 7] Prompt Length: 7 | Generated Tokens: 5489 | Reward: -49005
+2025-11-13 08:40:23,202 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 08:40:23,202 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 08:40:23,205 [DEBUG] [Gen 56 | Timestep 8] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 08:40:23,205 [DEBUG] [Gen 56 | Timestep 8] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 56 | Timestep 8] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 08:46:02,137 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 08:46:02,137 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 08:46:02,140 [DEBUG] [Gen 56 | Timestep 9] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 08:46:02,140 [DEBUG] [Gen 56 | Timestep 9] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 56 | Timestep 9] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 08:52:30,453 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 08:52:30,453 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 08:52:30,456 [DEBUG] [Gen 56 | Timestep 10] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 08:52:30,456 [DEBUG] [Gen 56 | Timestep 10] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 56 | Timestep 10] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 08:55:43,859 [DEBUG] [Gen 56 | Timestep 11] Prompt Length: 7 | Generated Tokens: 6692 | Reward: -41787
+2025-11-13 08:55:43,859 [DEBUG] [Gen 56 | Timestep 11] Prompt Length: 7 | Generated Tokens: 6692 | Reward: -41787
+[Gen 56 | Timestep 11] Prompt Length: 7 | Generated Tokens: 6692 | Reward: -41787
+2025-11-13 08:57:54,533 [DEBUG] [Gen 56 | Timestep 12] Prompt Length: 7 | Generated Tokens: 4881 | Reward: -52653
+2025-11-13 08:57:54,533 [DEBUG] [Gen 56 | Timestep 12] Prompt Length: 7 | Generated Tokens: 4881 | Reward: -52653
+[Gen 56 | Timestep 12] Prompt Length: 7 | Generated Tokens: 4881 | Reward: -52653
+2025-11-13 08:57:54,559 [DEBUG] [Gen 56 | Timestep 13] Prompt Length: 7 | Generated Tokens: 1 | Reward: -81933
+2025-11-13 08:57:54,559 [DEBUG] [Gen 56 | Timestep 13] Prompt Length: 7 | Generated Tokens: 1 | Reward: -81933
+[Gen 56 | Timestep 13] Prompt Length: 7 | Generated Tokens: 1 | Reward: -81933
+2025-11-13 09:01:50,310 [DEBUG] [Gen 56 | Timestep 14] Prompt Length: 7 | Generated Tokens: 7795 | Reward: -35169
+2025-11-13 09:01:50,310 [DEBUG] [Gen 56 | Timestep 14] Prompt Length: 7 | Generated Tokens: 7795 | Reward: -35169
+[Gen 56 | Timestep 14] Prompt Length: 7 | Generated Tokens: 7795 | Reward: -35169
+2025-11-13 09:03:59,383 [DEBUG] [Gen 56 | Timestep 15] Prompt Length: 7 | Generated Tokens: 4831 | Reward: -52953
+2025-11-13 09:03:59,383 [DEBUG] [Gen 56 | Timestep 15] Prompt Length: 7 | Generated Tokens: 4831 | Reward: -52953
+[Gen 56 | Timestep 15] Prompt Length: 7 | Generated Tokens: 4831 | Reward: -52953
+2025-11-13 09:04:04,404 [DEBUG] [Gen 56 | Timestep 16] Prompt Length: 7 | Generated Tokens: 222 | Reward: -80607
+2025-11-13 09:04:04,404 [DEBUG] [Gen 56 | Timestep 16] Prompt Length: 7 | Generated Tokens: 222 | Reward: -80607
+[Gen 56 | Timestep 16] Prompt Length: 7 | Generated Tokens: 222 | Reward: -80607
+2025-11-13 09:07:08,692 [DEBUG] [Gen 56 | Timestep 17] Prompt Length: 7 | Generated Tokens: 6443 | Reward: -43281
+2025-11-13 09:07:08,692 [DEBUG] [Gen 56 | Timestep 17] Prompt Length: 7 | Generated Tokens: 6443 | Reward: -43281
+[Gen 56 | Timestep 17] Prompt Length: 7 | Generated Tokens: 6443 | Reward: -43281
+2025-11-13 09:09:52,014 [DEBUG] [Gen 56 | Timestep 18] Prompt Length: 7 | Generated Tokens: 5855 | Reward: -46809
+2025-11-13 09:09:52,014 [DEBUG] [Gen 56 | Timestep 18] Prompt Length: 7 | Generated Tokens: 5855 | Reward: -46809
+[Gen 56 | Timestep 18] Prompt Length: 7 | Generated Tokens: 5855 | Reward: -46809
+2025-11-13 09:09:53,252 [DEBUG] [Gen 56 | Timestep 19] Prompt Length: 7 | Generated Tokens: 55 | Reward: -81609
+2025-11-13 09:09:53,252 [DEBUG] [Gen 56 | Timestep 19] Prompt Length: 7 | Generated Tokens: 55 | Reward: -81609
+[Gen 56 | Timestep 19] Prompt Length: 7 | Generated Tokens: 55 | Reward: -81609
+2025-11-13 09:09:53,252 [INFO] [Budgeted Success] after 2900 evals (offset 2740): Success@OGF≥2=0.206, Success@OGF≥4=0.069
+2025-11-13 09:09:53,252 [INFO] [Budgeted Success] after 2900 evals (offset 2740): Success@OGF≥2=0.206, Success@OGF≥4=0.069
+2025-11-13 09:09:53,253 [INFO] Generation 56 SUMMARY: {"generation": 56, "population": [{"prompt_length": 7, "reward": -10107}, {"prompt_length": 7, "reward": -42237}, {"prompt_length": 7, "reward": -47265}, {"prompt_length": 7, "reward": -81093}, {"prompt_length": 7, "reward": -40539}, {"prompt_length": 7, "reward": -73743}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -49005}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -41787}, {"prompt_length": 7, "reward": -52653}, {"prompt_length": 7, "reward": -81933}, {"prompt_length": 7, "reward": -35169}, {"prompt_length": 7, "reward": -52953}, {"prompt_length": 7, "reward": -80607}, {"prompt_length": 7, "reward": -43281}, {"prompt_length": 7, "reward": -46809}, {"prompt_length": 7, "reward": -81609}], "best_reward": 16372, "average_reward": -243039.5}
+2025-11-13 09:09:53,253 [INFO] Generation 56 SUMMARY: {"generation": 56, "population": [{"prompt_length": 7, "reward": -10107}, {"prompt_length": 7, "reward": -42237}, {"prompt_length": 7, "reward": -47265}, {"prompt_length": 7, "reward": -81093}, {"prompt_length": 7, "reward": -40539}, {"prompt_length": 7, "reward": -73743}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -49005}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -41787}, {"prompt_length": 7, "reward": -52653}, {"prompt_length": 7, "reward": -81933}, {"prompt_length": 7, "reward": -35169}, {"prompt_length": 7, "reward": -52953}, {"prompt_length": 7, "reward": -80607}, {"prompt_length": 7, "reward": -43281}, {"prompt_length": 7, "reward": -46809}, {"prompt_length": 7, "reward": -81609}], "best_reward": 16372, "average_reward": -243039.5}
+Generation 56 SUMMARY: {"generation": 56, "population": [{"prompt_length": 7, "reward": -10107}, {"prompt_length": 7, "reward": -42237}, {"prompt_length": 7, "reward": -47265}, {"prompt_length": 7, "reward": -81093}, {"prompt_length": 7, "reward": -40539}, {"prompt_length": 7, "reward": -73743}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -49005}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -41787}, {"prompt_length": 7, "reward": -52653}, {"prompt_length": 7, "reward": -81933}, {"prompt_length": 7, "reward": -35169}, {"prompt_length": 7, "reward": -52953}, {"prompt_length": 7, "reward": -80607}, {"prompt_length": 7, "reward": -43281}, {"prompt_length": 7, "reward": -46809}, {"prompt_length": 7, "reward": -81609}], "best_reward": 16372, "average_reward": -243039.5}
+2025-11-13 09:09:53,261 [INFO] Checkpoint saved at generation 56
+2025-11-13 09:09:53,261 [INFO] Checkpoint saved at generation 56
+--- End of Generation 56 ---
+
+2025-11-13 09:09:53,261 [INFO] Generation 57 START
+2025-11-13 09:09:53,261 [INFO] Generation 57 START
+2025-11-13 09:09:53,714 [DEBUG] [Gen 57 | Timestep 0] Prompt Length: 7 | Generated Tokens: 20 | Reward: -81819
+2025-11-13 09:09:53,714 [DEBUG] [Gen 57 | Timestep 0] Prompt Length: 7 | Generated Tokens: 20 | Reward: -81819
+[Gen 57 | Timestep 0] Prompt Length: 7 | Generated Tokens: 20 | Reward: -81819
+2025-11-13 09:12:39,165 [DEBUG] [Gen 57 | Timestep 1] Prompt Length: 7 | Generated Tokens: 5916 | Reward: -46443
+2025-11-13 09:12:39,165 [DEBUG] [Gen 57 | Timestep 1] Prompt Length: 7 | Generated Tokens: 5916 | Reward: -46443
+[Gen 57 | Timestep 1] Prompt Length: 7 | Generated Tokens: 5916 | Reward: -46443
+2025-11-13 09:16:18,003 [DEBUG] [Gen 57 | Timestep 2] Prompt Length: 7 | Generated Tokens: 7364 | Reward: -37755
+2025-11-13 09:16:18,003 [DEBUG] [Gen 57 | Timestep 2] Prompt Length: 7 | Generated Tokens: 7364 | Reward: -37755
+[Gen 57 | Timestep 2] Prompt Length: 7 | Generated Tokens: 7364 | Reward: -37755
+2025-11-13 09:19:04,297 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 09:19:04,297 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 09:19:04,300 [DEBUG] [Gen 57 | Timestep 3] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 09:19:04,300 [DEBUG] [Gen 57 | Timestep 3] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 57 | Timestep 3] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 09:22:26,914 [DEBUG] [Gen 57 | Timestep 4] Prompt Length: 7 | Generated Tokens: 6939 | Reward: -40305
+2025-11-13 09:22:26,914 [DEBUG] [Gen 57 | Timestep 4] Prompt Length: 7 | Generated Tokens: 6939 | Reward: -40305
+[Gen 57 | Timestep 4] Prompt Length: 7 | Generated Tokens: 6939 | Reward: -40305
+2025-11-13 09:25:44,356 [DEBUG] [Gen 57 | Timestep 5] Prompt Length: 7 | Generated Tokens: 6800 | Reward: -41139
+2025-11-13 09:25:44,356 [DEBUG] [Gen 57 | Timestep 5] Prompt Length: 7 | Generated Tokens: 6800 | Reward: -41139
+[Gen 57 | Timestep 5] Prompt Length: 7 | Generated Tokens: 6800 | Reward: -41139
+2025-11-13 09:29:26,093 [DEBUG] [Gen 57 | Timestep 6] Prompt Length: 7 | Generated Tokens: 7439 | Reward: -37305
+2025-11-13 09:29:26,093 [DEBUG] [Gen 57 | Timestep 6] Prompt Length: 7 | Generated Tokens: 7439 | Reward: -37305
+[Gen 57 | Timestep 6] Prompt Length: 7 | Generated Tokens: 7439 | Reward: -37305
+2025-11-13 09:34:47,833 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 09:34:47,833 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 09:34:47,836 [DEBUG] [Gen 57 | Timestep 7] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 09:34:47,836 [DEBUG] [Gen 57 | Timestep 7] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 57 | Timestep 7] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 09:35:16,717 [DEBUG] [Gen 57 | Timestep 8] Prompt Length: 7 | Generated Tokens: 1231 | Reward: -74553
+2025-11-13 09:35:16,717 [DEBUG] [Gen 57 | Timestep 8] Prompt Length: 7 | Generated Tokens: 1231 | Reward: -74553
+[Gen 57 | Timestep 8] Prompt Length: 7 | Generated Tokens: 1231 | Reward: -74553
+2025-11-13 09:35:35,265 [DEBUG] [Gen 57 | Timestep 9] Prompt Length: 7 | Generated Tokens: 803 | Reward: -77121
+2025-11-13 09:35:35,265 [DEBUG] [Gen 57 | Timestep 9] Prompt Length: 7 | Generated Tokens: 803 | Reward: -77121
+[Gen 57 | Timestep 9] Prompt Length: 7 | Generated Tokens: 803 | Reward: -77121
+2025-11-13 09:40:07,147 [DEBUG] [Gen 57 | Timestep 10] Prompt Length: 7 | Generated Tokens: 8680 | Reward: -29859
+2025-11-13 09:40:07,147 [DEBUG] [Gen 57 | Timestep 10] Prompt Length: 7 | Generated Tokens: 8680 | Reward: -29859
+[Gen 57 | Timestep 10] Prompt Length: 7 | Generated Tokens: 8680 | Reward: -29859
+2025-11-13 09:40:07,150 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 09:40:07,150 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 09:46:20,338 [DEBUG] [Gen 57 | Timestep 11] Prompt Length: 7 | Generated Tokens: 10949 | Reward: -16245
+2025-11-13 09:46:20,338 [DEBUG] [Gen 57 | Timestep 11] Prompt Length: 7 | Generated Tokens: 10949 | Reward: -16245
+[Gen 57 | Timestep 11] Prompt Length: 7 | Generated Tokens: 10949 | Reward: -16245
+2025-11-13 09:46:20,340 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 09:46:20,340 [DEBUG] Saved new >8192 prompt (unique).
+2025-11-13 09:46:29,952 [DEBUG] [Gen 57 | Timestep 12] Prompt Length: 7 | Generated Tokens: 422 | Reward: -79407
+2025-11-13 09:46:29,952 [DEBUG] [Gen 57 | Timestep 12] Prompt Length: 7 | Generated Tokens: 422 | Reward: -79407
+[Gen 57 | Timestep 12] Prompt Length: 7 | Generated Tokens: 422 | Reward: -79407
+2025-11-13 09:50:09,977 [DEBUG] [Gen 57 | Timestep 13] Prompt Length: 7 | Generated Tokens: 7395 | Reward: -37569
+2025-11-13 09:50:09,977 [DEBUG] [Gen 57 | Timestep 13] Prompt Length: 7 | Generated Tokens: 7395 | Reward: -37569
+[Gen 57 | Timestep 13] Prompt Length: 7 | Generated Tokens: 7395 | Reward: -37569
+2025-11-13 09:52:55,845 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 09:52:55,845 [WARNING] [Fallback] Prompt caused generation failure: probability tensor contains either `inf`, `nan` or element < 0
+2025-11-13 09:52:55,848 [DEBUG] [Gen 57 | Timestep 14] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 09:52:55,848 [DEBUG] [Gen 57 | Timestep 14] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 57 | Timestep 14] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-11-13 09:56:21,582 [DEBUG] [Gen 57 | Timestep 15] Prompt Length: 7 | Generated Tokens: 7021 | Reward: -39813
+2025-11-13 09:56:21,582 [DEBUG] [Gen 57 | Timestep 15] Prompt Length: 7 | Generated Tokens: 7021 | Reward: -39813
+[Gen 57 | Timestep 15] Prompt Length: 7 | Generated Tokens: 7021 | Reward: -39813
+[watchdog] Soft timeout (~11h50m). Sending SIGTERM to 2075788
