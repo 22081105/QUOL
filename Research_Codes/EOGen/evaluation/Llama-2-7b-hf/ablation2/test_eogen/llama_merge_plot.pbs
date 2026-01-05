@@ -1,0 +1,37 @@
+#!/bin/bash
+#PBS -N llama_merge
+#PBS -l select=1:ncpus=2:mem=32gb
+#PBS -l walltime=00:30:00
+#PBS -m ae
+#PBS -j oe
+
+set -euo pipefail
+
+cd "$PBS_O_WORKDIR"
+
+echo "================ HW INFO ================"
+echo "Date: $(date)"
+echo "Host: $(hostname)"
+echo "Job:  ${PBS_JOBID:-NA}"
+# Keep your GPU-print block (harmless on CPU nodes)
+command -v nvidia-smi >/dev/null 2>&1 && {
+  nvidia-smi -L
+  nvidia-smi --query-gpu=index,name,uuid,driver_version,memory.total --format=csv,noheader
+} || echo "nvidia-smi not found (CPU merge job expected)"
+echo "========================================="
+
+SCR=/srv/scratch/$USER
+source "$SCR/venvs/ea/bin/activate"
+
+
+export HF_HOME=/srv/scratch/$USER/models/.hf_home
+export HF_HUB_CACHE=$HF_HOME/hub
+export HF_DATASETS_CACHE=$HF_HOME/datasets
+
+cd /srv/scratch/$USER/llama_test/ablation2/test_eogen
+
+python test_eogen.py \
+  --merge_only \
+  --num_chunks 15 \
+  --csv eogen_results_llama.csv \
+  --merged_csv eogen_results_llama_merged.csv

@@ -1,0 +1,36 @@
+#!/bin/bash
+#PBS -N Ab2_llama_eogen
+#PBS -l select=1:ncpus=4:ngpus=1:mem=32gb:gpu_model=L40S
+#PBS -l walltime=12:00:00
+#PBS -m ae
+#PBS -j oe
+#PBS -J 0-14
+
+set -euo pipefail
+
+cd "$PBS_O_WORKDIR"
+
+echo "================ HW / GPU INFO ================"
+echo "Date: $(date)"
+echo "Host: $(hostname)"
+echo "Job:  ${PBS_JOBID:-NA}  ArrayIndex: ${PBS_ARRAY_INDEX:-NA}"
+command -v nvidia-smi >/dev/null 2>&1 && {
+  nvidia-smi -L
+  nvidia-smi --query-gpu=index,name,uuid,driver_version,memory.total --format=csv,noheader
+} || echo "nvidia-smi not found"
+echo "==============================================="
+
+SCR=/srv/scratch/$USER
+source "$SCR/venvs/ea/bin/activate"
+
+export HF_HOME=/srv/scratch/$USER/models/.hf_home
+export HF_HUB_CACHE=$HF_HOME/hub
+export HF_DATASETS_CACHE=$HF_HOME/datasets
+
+cd /srv/scratch/$USER/llama_test/ablation2/test_eogen
+
+python test_eogen.py \
+  --chunk_index "${PBS_ARRAY_INDEX}" \
+  --num_chunks 15 \
+  --csv eogen_results_llama.csv \
+  --no_plots
