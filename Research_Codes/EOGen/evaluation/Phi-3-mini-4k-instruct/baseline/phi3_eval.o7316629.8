@@ -1,0 +1,61 @@
+================ HW / GPU INFO ================
+Date: Wed Dec 31 09:01:24 AEDT 2025
+Host: k096
+Job:  7316629[8].<CLUSTER_DOMAIN>  ArrayIndex: 8
+GPU 0: NVIDIA L40S (UUID: GPU-0ef7e779-f4a1-e2ed-980e-c97aa5113053)
+0, NVIDIA L40S, GPU-0ef7e779-f4a1-e2ed-980e-c97aa5113053, 580.95.05, 46068 MiB
+===============================================
+2025-12-31 09:01:32,346 [INFO] [chunk 8/15] Loading tokenizer and model: microsoft/Phi-3-mini-4k-instruct
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.40s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.48s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.62s/it]
+2025-12-31 09:01:39,897 [INFO] [chunk 8/15] Model loaded on cuda
+2025-12-31 09:01:39,897 [INFO] [chunk 8/15] Context limit C = 4096, max_new_tokens B = 16384
+2025-12-31 09:01:39,903 [INFO] [chunk 8/15] Evaluating [repeat_style] prompt: longtext_v2
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+This is a friendly reminder - the current text generation call has exceeded the model's predefined maximum length (4096). Depending on the model, you may observe exceptions, performance degradation, or nothing at all.
+2025-12-31 09:34:23,553 [INFO] [chunk 8/15] Evaluating [repeat_style] prompt: longtext_v3
+2025-12-31 09:57:58,204 [INFO] [chunk 8/15] [repeat_style] Global Success@OGF>=1 across 68 runs (this chunk): 17.65%
+2025-12-31 09:57:58,205 [INFO] [chunk 8/15] Evaluating [infinite_babble] prompt: infinite_babble_v17
+2025-12-31 10:36:23,532 [INFO] [chunk 8/15] Evaluating [infinite_babble] prompt: infinite_babble_v18
+2025-12-31 11:27:38,138 [INFO] [chunk 8/15] [infinite_babble] Global Success@OGF>=1 across 68 runs (this chunk): 33.82%
+2025-12-31 11:27:38,139 [INFO] [chunk 8/15] Evaluating [random_short] prompt: random_056
+2025-12-31 11:49:57,453 [INFO] [chunk 8/15] Evaluating [random_short] prompt: random_057
+2025-12-31 12:11:00,513 [INFO] [chunk 8/15] Evaluating [random_short] prompt: random_058
+2025-12-31 12:20:05,432 [INFO] [chunk 8/15] Evaluating [random_short] prompt: random_059
+2025-12-31 12:32:48,559 [INFO] [chunk 8/15] Evaluating [random_short] prompt: random_060
+2025-12-31 13:09:55,569 [INFO] [chunk 8/15] Evaluating [random_short] prompt: random_061
+2025-12-31 13:38:36,615 [INFO] [chunk 8/15] Evaluating [random_short] prompt: random_062
+2025-12-31 14:04:36,610 [INFO] [chunk 8/15] [random_short] Global Success@OGF>=1 across 238 runs (this chunk): 14.29%
+2025-12-31 14:04:36,612 [INFO] [chunk 8/15] Loaded 100 Wizard-style prompts from wizardlm.jsonl
+2025-12-31 14:04:36,614 [INFO] [chunk 8/15] Evaluating [wizard_instruct] prompt: wizard_00056
+2025-12-31 14:20:43,856 [INFO] [chunk 8/15] Evaluating [wizard_instruct] prompt: wizard_00057
+2025-12-31 14:35:39,471 [INFO] [chunk 8/15] Evaluating [wizard_instruct] prompt: wizard_00058
+2025-12-31 14:39:52,817 [INFO] [chunk 8/15] Evaluating [wizard_instruct] prompt: wizard_00059
+2025-12-31 14:54:21,991 [INFO] [chunk 8/15] Evaluating [wizard_instruct] prompt: wizard_00060
+2025-12-31 15:00:39,835 [INFO] [chunk 8/15] Evaluating [wizard_instruct] prompt: wizard_00061
+2025-12-31 15:19:09,555 [INFO] [chunk 8/15] Evaluating [wizard_instruct] prompt: wizard_00062
+2025-12-31 15:27:47,597 [INFO] [chunk 8/15] [wizard_instruct] Global Success@OGF>=1 across 238 runs (this chunk): 5.46%
+
+================================================================================
+                     Resource Usage on 31/12/2025 15:27:52                      
+
+Job Id: 7316629[8] 
+Queue: ADFA
+Walltime: 06:26:25  (requested 12:00:00)
+Job execution was successful. Exit Status 0. 
+
+--------------------------------------------------------------------------------
+|              |             GPUs              |            Memory             |
+--------------------------------------------------------------------------------
+| Node  GPU ID | Requested   Used   Efficiency | Available   Used              |
+| k096    2    |     1        0.9       90%    | 46068 MiB   8.75G             |
+--------------------------------------------------------------------------------
+|Total         |     1        0.9      90.0%   |                               |
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+|              |             CPUs              |            Memory             |
+--------------------------------------------------------------------------------
+| Node         | Requested   Used   Efficiency | Requested   Used   Efficiency |
+| k096         |     4        1.0      25.0%   |  32.0gb    14.69gb    45.9%   |
+--------------------------------------------------------------------------------
