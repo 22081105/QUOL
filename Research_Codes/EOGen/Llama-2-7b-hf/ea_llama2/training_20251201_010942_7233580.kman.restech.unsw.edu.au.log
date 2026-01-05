@@ -1,0 +1,577 @@
+/srv/scratch/deeplearning/z3550042/venvs/ea/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2025-12-01 01:10:20,331 [INFO] CUDA device: NVIDIA A100-PCIE-40GB (capability 8.0)
+2025-12-01 01:10:20,331 [INFO] CUDA device: NVIDIA A100-PCIE-40GB (capability 8.0)
+2025-12-01 01:10:20,331 [INFO] Configuration: {"MODEL_NAME": "meta-llama/Llama-2-7b-hf", "MAX_OUTPUT_TOKENS": 16384, "MIN_PROMPT_LENGTH": 3, "MAX_PROMPT_LENGTH": 7, "DEVICE": "cuda", "SAVE_PATH": "/srv/scratch/deeplearning/z3550042/DIN/EA/Llama", "POPULATION_SIZE": 20, "GENERATIONS": 500, "MUTATION_RATE": 0.05, "ALPHA": 2}
+2025-12-01 01:10:20,331 [INFO] Configuration: {"MODEL_NAME": "meta-llama/Llama-2-7b-hf", "MAX_OUTPUT_TOKENS": 16384, "MIN_PROMPT_LENGTH": 3, "MAX_PROMPT_LENGTH": 7, "DEVICE": "cuda", "SAVE_PATH": "/srv/scratch/deeplearning/z3550042/DIN/EA/Llama", "POPULATION_SIZE": 20, "GENERATIONS": 500, "MUTATION_RATE": 0.05, "ALPHA": 2}
+2025-12-01 01:10:20,331 [INFO] Decoding/Server knobs: {"do_sample": true, "temperature": null, "top_p": null, "repetition_penalty": null, "stop_sequences": null, "max_new_tokens": 16384}
+2025-12-01 01:10:20,331 [INFO] Decoding/Server knobs: {"do_sample": true, "temperature": null, "top_p": null, "repetition_penalty": null, "stop_sequences": null, "max_new_tokens": 16384}
+2025-12-01 01:10:20,331 [INFO] Save path ensured at: /srv/scratch/deeplearning/z3550042/DIN/EA/Llama
+2025-12-01 01:10:20,331 [INFO] Save path ensured at: /srv/scratch/deeplearning/z3550042/DIN/EA/Llama
+2025-12-01 01:10:20,332 [DEBUG] TF32 enabled for CUDA matmul
+2025-12-01 01:10:20,332 [DEBUG] TF32 enabled for CUDA matmul
+2025-12-01 01:10:20,332 [INFO] Loading Llama-2-7b-hf model and tokenizer...
+2025-12-01 01:10:20,332 [INFO] Loading Llama-2-7b-hf model and tokenizer...
+2025-12-01 01:10:20,341 [DEBUG] Starting new HTTPS connection (1): huggingface.co:443
+2025-12-01 01:10:20,341 [DEBUG] Starting new HTTPS connection (1): huggingface.co:443
+2025-12-01 01:10:20,597 [DEBUG] https://huggingface.co:443 "HEAD /meta-llama/Llama-2-7b-hf/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-12-01 01:10:20,597 [DEBUG] https://huggingface.co:443 "HEAD /meta-llama/Llama-2-7b-hf/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-12-01 01:10:21,189 [DEBUG] https://huggingface.co:443 "GET /api/models/meta-llama/Llama-2-7b-hf/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-12-01 01:10:21,189 [DEBUG] https://huggingface.co:443 "GET /api/models/meta-llama/Llama-2-7b-hf/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-12-01 01:10:21,524 [DEBUG] https://huggingface.co:443 "HEAD /meta-llama/Llama-2-7b-hf/resolve/main/config.json HTTP/1.1" 200 0
+2025-12-01 01:10:21,524 [DEBUG] https://huggingface.co:443 "HEAD /meta-llama/Llama-2-7b-hf/resolve/main/config.json HTTP/1.1" 200 0
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.43s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.57s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.70s/it]
+2025-12-01 01:10:28,178 [DEBUG] https://huggingface.co:443 "HEAD /meta-llama/Llama-2-7b-hf/resolve/main/generation_config.json HTTP/1.1" 200 0
+2025-12-01 01:10:28,178 [DEBUG] https://huggingface.co:443 "HEAD /meta-llama/Llama-2-7b-hf/resolve/main/generation_config.json HTTP/1.1" 200 0
+2025-12-01 01:10:28,401 [DEBUG] https://huggingface.co:443 "HEAD /meta-llama/Llama-2-7b-hf/resolve/main/custom_generate/generate.py HTTP/1.1" 404 0
+2025-12-01 01:10:28,401 [DEBUG] https://huggingface.co:443 "HEAD /meta-llama/Llama-2-7b-hf/resolve/main/custom_generate/generate.py HTTP/1.1" 404 0
+2025-12-01 01:11:10,801 [INFO] Llama-2-7b-hf model loaded on cuda with dtype torch.float16
+2025-12-01 01:11:10,801 [INFO] Llama-2-7b-hf model loaded on cuda with dtype torch.float16
+2025-12-01 01:11:10,804 [DEBUG] Gradient checkpointing enabled for Llama-2-7b-hf model
+2025-12-01 01:11:10,804 [DEBUG] Gradient checkpointing enabled for Llama-2-7b-hf model
+2025-12-01 01:11:10,804 [INFO] EOS_TOKEN_ID: 2, VOCAB_SIZE: 32000
+2025-12-01 01:11:10,804 [INFO] EOS_TOKEN_ID: 2, VOCAB_SIZE: 32000
+[nltk_data] Downloading package words to /home/z3550042/nltk_data...
+[nltk_data]   Package words is already up-to-date!
+2025-12-01 01:11:14,630 [INFO] Loaded 449 previously saved >8192 prompts for deduplication.
+2025-12-01 01:11:14,630 [INFO] Loaded 449 previously saved >8192 prompts for deduplication.
+2025-12-01 01:11:14,633 [INFO] Loaded checkpoint from generation 244
+2025-12-01 01:11:14,633 [INFO] Loaded checkpoint from generation 244
+2025-12-01 01:11:14,634 [INFO] Generation 245 START
+2025-12-01 01:11:14,634 [INFO] Generation 245 START
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+This is a friendly reminder - the current text generation call has exceeded the model's predefined maximum length (4096). Depending on the model, you may observe exceptions, performance degradation, or nothing at all.
+2025-12-01 01:18:35,983 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 01:18:35,983 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 01:18:35,996 [DEBUG] [Gen 245 | Timestep 0] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 01:18:35,996 [DEBUG] [Gen 245 | Timestep 0] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 245 | Timestep 0] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 01:27:51,001 [DEBUG] [Gen 245 | Timestep 1] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 01:27:51,001 [DEBUG] [Gen 245 | Timestep 1] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 245 | Timestep 1] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 01:27:51,001 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 01:27:51,001 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 01:35:55,389 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 01:35:55,389 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 01:35:55,392 [DEBUG] [Gen 245 | Timestep 2] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 01:35:55,392 [DEBUG] [Gen 245 | Timestep 2] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 245 | Timestep 2] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 01:38:36,068 [DEBUG] [Gen 245 | Timestep 3] Prompt Length: 7 | Generated Tokens: 6717 | Reward: -41637
+2025-12-01 01:38:36,068 [DEBUG] [Gen 245 | Timestep 3] Prompt Length: 7 | Generated Tokens: 6717 | Reward: -41637
+[Gen 245 | Timestep 3] Prompt Length: 7 | Generated Tokens: 6717 | Reward: -41637
+2025-12-01 01:47:49,793 [DEBUG] [Gen 245 | Timestep 4] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 01:47:49,793 [DEBUG] [Gen 245 | Timestep 4] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 245 | Timestep 4] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 01:47:49,793 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 01:47:49,793 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 01:57:03,560 [DEBUG] [Gen 245 | Timestep 5] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 01:57:03,560 [DEBUG] [Gen 245 | Timestep 5] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 245 | Timestep 5] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 01:57:03,582 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 01:57:03,582 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 02:05:06,196 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 02:05:06,196 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 02:05:06,200 [DEBUG] [Gen 245 | Timestep 6] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 02:05:06,200 [DEBUG] [Gen 245 | Timestep 6] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 245 | Timestep 6] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 02:11:39,075 [DEBUG] [Gen 245 | Timestep 7] Prompt Length: 7 | Generated Tokens: 12994 | Reward: -3975
+2025-12-01 02:11:39,075 [DEBUG] [Gen 245 | Timestep 7] Prompt Length: 7 | Generated Tokens: 12994 | Reward: -3975
+[Gen 245 | Timestep 7] Prompt Length: 7 | Generated Tokens: 12994 | Reward: -3975
+2025-12-01 02:11:39,075 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 02:11:39,075 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 02:16:11,229 [DEBUG] [Gen 245 | Timestep 8] Prompt Length: 7 | Generated Tokens: 10015 | Reward: -21849
+2025-12-01 02:16:11,229 [DEBUG] [Gen 245 | Timestep 8] Prompt Length: 7 | Generated Tokens: 10015 | Reward: -21849
+[Gen 245 | Timestep 8] Prompt Length: 7 | Generated Tokens: 10015 | Reward: -21849
+2025-12-01 02:16:11,229 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 02:16:11,229 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 02:22:16,460 [DEBUG] [Gen 245 | Timestep 9] Prompt Length: 7 | Generated Tokens: 12349 | Reward: -7845
+2025-12-01 02:22:16,460 [DEBUG] [Gen 245 | Timestep 9] Prompt Length: 7 | Generated Tokens: 12349 | Reward: -7845
+[Gen 245 | Timestep 9] Prompt Length: 7 | Generated Tokens: 12349 | Reward: -7845
+2025-12-01 02:22:16,460 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 02:22:16,460 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 02:31:29,293 [DEBUG] [Gen 245 | Timestep 10] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 02:31:29,293 [DEBUG] [Gen 245 | Timestep 10] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 245 | Timestep 10] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 02:31:29,298 [DEBUG] Saved new >8192 prompt (unique).
+2025-12-01 02:31:29,298 [DEBUG] Saved new >8192 prompt (unique).
+2025-12-01 02:40:42,304 [DEBUG] [Gen 245 | Timestep 11] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 02:40:42,304 [DEBUG] [Gen 245 | Timestep 11] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 245 | Timestep 11] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 02:40:42,329 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 02:40:42,329 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 02:46:01,482 [DEBUG] [Gen 245 | Timestep 12] Prompt Length: 7 | Generated Tokens: 11227 | Reward: -14577
+2025-12-01 02:46:01,482 [DEBUG] [Gen 245 | Timestep 12] Prompt Length: 7 | Generated Tokens: 11227 | Reward: -14577
+[Gen 245 | Timestep 12] Prompt Length: 7 | Generated Tokens: 11227 | Reward: -14577
+2025-12-01 02:46:01,483 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 02:46:01,483 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 02:51:30,782 [DEBUG] [Gen 245 | Timestep 13] Prompt Length: 7 | Generated Tokens: 11482 | Reward: -13047
+2025-12-01 02:51:30,782 [DEBUG] [Gen 245 | Timestep 13] Prompt Length: 7 | Generated Tokens: 11482 | Reward: -13047
+[Gen 245 | Timestep 13] Prompt Length: 7 | Generated Tokens: 11482 | Reward: -13047
+2025-12-01 02:51:30,782 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 02:51:30,782 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 03:00:44,244 [DEBUG] [Gen 245 | Timestep 14] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 03:00:44,244 [DEBUG] [Gen 245 | Timestep 14] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 245 | Timestep 14] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 03:00:44,245 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 03:00:44,245 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 03:02:54,595 [DEBUG] [Gen 245 | Timestep 15] Prompt Length: 7 | Generated Tokens: 5700 | Reward: -47739
+2025-12-01 03:02:54,595 [DEBUG] [Gen 245 | Timestep 15] Prompt Length: 7 | Generated Tokens: 5700 | Reward: -47739
+[Gen 245 | Timestep 15] Prompt Length: 7 | Generated Tokens: 5700 | Reward: -47739
+2025-12-01 03:12:07,858 [DEBUG] [Gen 245 | Timestep 16] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 03:12:07,858 [DEBUG] [Gen 245 | Timestep 16] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 245 | Timestep 16] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 03:12:07,859 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 03:12:07,859 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 03:14:51,993 [DEBUG] [Gen 245 | Timestep 17] Prompt Length: 7 | Generated Tokens: 6840 | Reward: -40899
+2025-12-01 03:14:51,993 [DEBUG] [Gen 245 | Timestep 17] Prompt Length: 7 | Generated Tokens: 6840 | Reward: -40899
+[Gen 245 | Timestep 17] Prompt Length: 7 | Generated Tokens: 6840 | Reward: -40899
+2025-12-01 03:24:05,266 [DEBUG] [Gen 245 | Timestep 18] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 03:24:05,266 [DEBUG] [Gen 245 | Timestep 18] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 245 | Timestep 18] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 03:24:05,266 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 03:24:05,266 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 03:31:42,199 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 03:31:42,199 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 03:31:42,203 [DEBUG] [Gen 245 | Timestep 19] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 03:31:42,203 [DEBUG] [Gen 245 | Timestep 19] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 245 | Timestep 19] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 03:31:42,203 [INFO] [Budgeted Success] after 2760 evals (offset 2740): Success@OGF≥2=0.650, Success@OGF≥4=0.400
+2025-12-01 03:31:42,203 [INFO] [Budgeted Success] after 2760 evals (offset 2740): Success@OGF≥2=0.650, Success@OGF≥4=0.400
+2025-12-01 03:31:42,203 [INFO] Generation 245 SUMMARY: {"generation": 245, "population": [{"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -41637}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -3975}, {"prompt_length": 7, "reward": -21849}, {"prompt_length": 7, "reward": -7845}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -14577}, {"prompt_length": 7, "reward": -13047}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -47739}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -40899}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}], "best_reward": 16372, "average_reward": -203030.4}
+2025-12-01 03:31:42,203 [INFO] Generation 245 SUMMARY: {"generation": 245, "population": [{"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -41637}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -3975}, {"prompt_length": 7, "reward": -21849}, {"prompt_length": 7, "reward": -7845}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -14577}, {"prompt_length": 7, "reward": -13047}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -47739}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -40899}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}], "best_reward": 16372, "average_reward": -203030.4}
+Generation 245 SUMMARY: {"generation": 245, "population": [{"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -41637}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -3975}, {"prompt_length": 7, "reward": -21849}, {"prompt_length": 7, "reward": -7845}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -14577}, {"prompt_length": 7, "reward": -13047}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -47739}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -40899}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}], "best_reward": 16372, "average_reward": -203030.4}
+2025-12-01 03:31:42,239 [INFO] Checkpoint saved at generation 245
+2025-12-01 03:31:42,239 [INFO] Checkpoint saved at generation 245
+--- End of Generation 245 ---
+
+2025-12-01 03:31:42,239 [INFO] Generation 246 START
+2025-12-01 03:31:42,239 [INFO] Generation 246 START
+2025-12-01 03:40:55,045 [DEBUG] [Gen 246 | Timestep 0] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 03:40:55,045 [DEBUG] [Gen 246 | Timestep 0] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 246 | Timestep 0] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 03:40:55,046 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 03:40:55,046 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 03:44:48,001 [DEBUG] [Gen 246 | Timestep 1] Prompt Length: 7 | Generated Tokens: 8932 | Reward: -28347
+2025-12-01 03:44:48,001 [DEBUG] [Gen 246 | Timestep 1] Prompt Length: 7 | Generated Tokens: 8932 | Reward: -28347
+[Gen 246 | Timestep 1] Prompt Length: 7 | Generated Tokens: 8932 | Reward: -28347
+2025-12-01 03:44:48,002 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 03:44:48,002 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 03:54:00,993 [DEBUG] [Gen 246 | Timestep 2] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 03:54:00,993 [DEBUG] [Gen 246 | Timestep 2] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 246 | Timestep 2] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 03:54:00,993 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 03:54:00,993 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 03:57:22,081 [DEBUG] [Gen 246 | Timestep 3] Prompt Length: 7 | Generated Tokens: 7999 | Reward: -33945
+2025-12-01 03:57:22,081 [DEBUG] [Gen 246 | Timestep 3] Prompt Length: 7 | Generated Tokens: 7999 | Reward: -33945
+[Gen 246 | Timestep 3] Prompt Length: 7 | Generated Tokens: 7999 | Reward: -33945
+2025-12-01 04:05:49,010 [DEBUG] [Gen 246 | Timestep 4] Prompt Length: 7 | Generated Tokens: 15458 | Reward: 10809
+2025-12-01 04:05:49,010 [DEBUG] [Gen 246 | Timestep 4] Prompt Length: 7 | Generated Tokens: 15458 | Reward: 10809
+[Gen 246 | Timestep 4] Prompt Length: 7 | Generated Tokens: 15458 | Reward: 10809
+2025-12-01 04:05:49,011 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 04:05:49,011 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 04:15:02,088 [DEBUG] [Gen 246 | Timestep 5] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 04:15:02,088 [DEBUG] [Gen 246 | Timestep 5] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 246 | Timestep 5] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 04:15:02,104 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 04:15:02,104 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 04:24:15,246 [DEBUG] [Gen 246 | Timestep 6] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 04:24:15,246 [DEBUG] [Gen 246 | Timestep 6] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 246 | Timestep 6] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 04:24:15,247 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 04:24:15,247 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 04:33:28,442 [DEBUG] [Gen 246 | Timestep 7] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 04:33:28,442 [DEBUG] [Gen 246 | Timestep 7] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 246 | Timestep 7] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 04:33:28,442 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 04:33:28,442 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 04:36:41,003 [DEBUG] [Gen 246 | Timestep 8] Prompt Length: 7 | Generated Tokens: 7737 | Reward: -35517
+2025-12-01 04:36:41,003 [DEBUG] [Gen 246 | Timestep 8] Prompt Length: 7 | Generated Tokens: 7737 | Reward: -35517
+[Gen 246 | Timestep 8] Prompt Length: 7 | Generated Tokens: 7737 | Reward: -35517
+2025-12-01 04:42:13,032 [DEBUG] [Gen 246 | Timestep 9] Prompt Length: 7 | Generated Tokens: 11545 | Reward: -12669
+2025-12-01 04:42:13,032 [DEBUG] [Gen 246 | Timestep 9] Prompt Length: 7 | Generated Tokens: 11545 | Reward: -12669
+[Gen 246 | Timestep 9] Prompt Length: 7 | Generated Tokens: 11545 | Reward: -12669
+2025-12-01 04:42:13,032 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 04:42:13,032 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 04:51:26,078 [DEBUG] [Gen 246 | Timestep 10] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 04:51:26,078 [DEBUG] [Gen 246 | Timestep 10] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 246 | Timestep 10] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 04:51:26,078 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 04:51:26,078 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 05:00:39,149 [DEBUG] [Gen 246 | Timestep 11] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 05:00:39,149 [DEBUG] [Gen 246 | Timestep 11] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 246 | Timestep 11] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 05:00:39,149 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 05:00:39,149 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 05:05:44,632 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 05:05:44,632 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 05:05:44,635 [DEBUG] [Gen 246 | Timestep 12] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 05:05:44,635 [DEBUG] [Gen 246 | Timestep 12] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 246 | Timestep 12] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 05:11:06,068 [DEBUG] [Gen 246 | Timestep 13] Prompt Length: 7 | Generated Tokens: 11282 | Reward: -14247
+2025-12-01 05:11:06,068 [DEBUG] [Gen 246 | Timestep 13] Prompt Length: 7 | Generated Tokens: 11282 | Reward: -14247
+[Gen 246 | Timestep 13] Prompt Length: 7 | Generated Tokens: 11282 | Reward: -14247
+2025-12-01 05:11:06,093 [DEBUG] Saved new >8192 prompt (unique).
+2025-12-01 05:11:06,093 [DEBUG] Saved new >8192 prompt (unique).
+2025-12-01 05:20:19,158 [DEBUG] [Gen 246 | Timestep 14] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 05:20:19,158 [DEBUG] [Gen 246 | Timestep 14] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 246 | Timestep 14] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 05:20:19,159 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 05:20:19,159 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 05:26:39,692 [DEBUG] [Gen 246 | Timestep 15] Prompt Length: 7 | Generated Tokens: 12709 | Reward: -5685
+2025-12-01 05:26:39,692 [DEBUG] [Gen 246 | Timestep 15] Prompt Length: 7 | Generated Tokens: 12709 | Reward: -5685
+[Gen 246 | Timestep 15] Prompt Length: 7 | Generated Tokens: 12709 | Reward: -5685
+2025-12-01 05:26:39,693 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 05:26:39,693 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 05:31:43,437 [DEBUG] [Gen 246 | Timestep 16] Prompt Length: 7 | Generated Tokens: 10834 | Reward: -16935
+2025-12-01 05:31:43,437 [DEBUG] [Gen 246 | Timestep 16] Prompt Length: 7 | Generated Tokens: 10834 | Reward: -16935
+[Gen 246 | Timestep 16] Prompt Length: 7 | Generated Tokens: 10834 | Reward: -16935
+2025-12-01 05:31:43,438 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 05:31:43,438 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 05:40:19,012 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 05:40:19,012 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 05:40:19,016 [DEBUG] [Gen 246 | Timestep 17] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 05:40:19,016 [DEBUG] [Gen 246 | Timestep 17] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 246 | Timestep 17] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 05:48:06,785 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 05:48:06,785 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 05:48:06,788 [DEBUG] [Gen 246 | Timestep 18] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 05:48:06,788 [DEBUG] [Gen 246 | Timestep 18] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 246 | Timestep 18] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 05:54:06,224 [DEBUG] [Gen 246 | Timestep 19] Prompt Length: 7 | Generated Tokens: 12214 | Reward: -8655
+2025-12-01 05:54:06,224 [DEBUG] [Gen 246 | Timestep 19] Prompt Length: 7 | Generated Tokens: 12214 | Reward: -8655
+[Gen 246 | Timestep 19] Prompt Length: 7 | Generated Tokens: 12214 | Reward: -8655
+2025-12-01 05:54:06,264 [DEBUG] Saved new >8192 prompt (unique).
+2025-12-01 05:54:06,264 [DEBUG] Saved new >8192 prompt (unique).
+2025-12-01 05:54:06,264 [INFO] [Budgeted Success] after 2780 evals (offset 2740): Success@OGF≥2=0.700, Success@OGF≥4=0.400
+2025-12-01 05:54:06,264 [INFO] [Budgeted Success] after 2780 evals (offset 2740): Success@OGF≥2=0.700, Success@OGF≥4=0.400
+2025-12-01 05:54:06,264 [INFO] Generation 246 SUMMARY: {"generation": 246, "population": [{"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -28347}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -33945}, {"prompt_length": 7, "reward": 10809}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -35517}, {"prompt_length": 7, "reward": -12669}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -14247}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -5685}, {"prompt_length": 7, "reward": -16935}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -8655}], "best_reward": 16372, "average_reward": -150711.55}
+2025-12-01 05:54:06,264 [INFO] Generation 246 SUMMARY: {"generation": 246, "population": [{"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -28347}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -33945}, {"prompt_length": 7, "reward": 10809}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -35517}, {"prompt_length": 7, "reward": -12669}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -14247}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -5685}, {"prompt_length": 7, "reward": -16935}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -8655}], "best_reward": 16372, "average_reward": -150711.55}
+Generation 246 SUMMARY: {"generation": 246, "population": [{"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -28347}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -33945}, {"prompt_length": 7, "reward": 10809}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -35517}, {"prompt_length": 7, "reward": -12669}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -14247}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -5685}, {"prompt_length": 7, "reward": -16935}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -8655}], "best_reward": 16372, "average_reward": -150711.55}
+2025-12-01 05:54:06,309 [INFO] Checkpoint saved at generation 246
+2025-12-01 05:54:06,309 [INFO] Checkpoint saved at generation 246
+--- End of Generation 246 ---
+
+2025-12-01 05:54:06,309 [INFO] Generation 247 START
+2025-12-01 05:54:06,309 [INFO] Generation 247 START
+2025-12-01 05:56:45,193 [DEBUG] [Gen 247 | Timestep 0] Prompt Length: 7 | Generated Tokens: 6680 | Reward: -41859
+2025-12-01 05:56:45,193 [DEBUG] [Gen 247 | Timestep 0] Prompt Length: 7 | Generated Tokens: 6680 | Reward: -41859
+[Gen 247 | Timestep 0] Prompt Length: 7 | Generated Tokens: 6680 | Reward: -41859
+2025-12-01 06:04:41,329 [DEBUG] [Gen 247 | Timestep 1] Prompt Length: 7 | Generated Tokens: 14819 | Reward: 6975
+2025-12-01 06:04:41,329 [DEBUG] [Gen 247 | Timestep 1] Prompt Length: 7 | Generated Tokens: 14819 | Reward: 6975
+[Gen 247 | Timestep 1] Prompt Length: 7 | Generated Tokens: 14819 | Reward: 6975
+2025-12-01 06:04:41,330 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 06:04:41,330 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 06:07:48,280 [DEBUG] [Gen 247 | Timestep 2] Prompt Length: 7 | Generated Tokens: 7569 | Reward: -36525
+2025-12-01 06:07:48,280 [DEBUG] [Gen 247 | Timestep 2] Prompt Length: 7 | Generated Tokens: 7569 | Reward: -36525
+[Gen 247 | Timestep 2] Prompt Length: 7 | Generated Tokens: 7569 | Reward: -36525
+2025-12-01 06:17:01,134 [DEBUG] [Gen 247 | Timestep 3] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 06:17:01,134 [DEBUG] [Gen 247 | Timestep 3] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 247 | Timestep 3] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 06:17:01,134 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 06:17:01,134 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 06:24:46,945 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 06:24:46,945 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 06:24:46,978 [DEBUG] [Gen 247 | Timestep 4] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 06:24:46,978 [DEBUG] [Gen 247 | Timestep 4] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 247 | Timestep 4] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 06:33:59,763 [DEBUG] [Gen 247 | Timestep 5] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 06:33:59,763 [DEBUG] [Gen 247 | Timestep 5] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 247 | Timestep 5] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 06:33:59,763 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 06:33:59,763 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 06:41:03,132 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 06:41:03,132 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 06:41:03,135 [DEBUG] [Gen 247 | Timestep 6] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 06:41:03,135 [DEBUG] [Gen 247 | Timestep 6] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 247 | Timestep 6] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 06:49:42,739 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 06:49:42,739 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 06:49:42,742 [DEBUG] [Gen 247 | Timestep 7] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 06:49:42,742 [DEBUG] [Gen 247 | Timestep 7] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 247 | Timestep 7] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 06:55:57,728 [DEBUG] [Gen 247 | Timestep 8] Prompt Length: 7 | Generated Tokens: 12581 | Reward: -6453
+2025-12-01 06:55:57,728 [DEBUG] [Gen 247 | Timestep 8] Prompt Length: 7 | Generated Tokens: 12581 | Reward: -6453
+[Gen 247 | Timestep 8] Prompt Length: 7 | Generated Tokens: 12581 | Reward: -6453
+2025-12-01 06:55:57,728 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 06:55:57,728 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 07:05:10,523 [DEBUG] [Gen 247 | Timestep 9] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 07:05:10,523 [DEBUG] [Gen 247 | Timestep 9] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 247 | Timestep 9] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 07:05:10,523 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 07:05:10,523 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 07:14:23,286 [DEBUG] [Gen 247 | Timestep 10] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 07:14:23,286 [DEBUG] [Gen 247 | Timestep 10] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 247 | Timestep 10] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 07:14:23,286 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 07:14:23,286 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 07:17:26,464 [DEBUG] [Gen 247 | Timestep 11] Prompt Length: 7 | Generated Tokens: 7454 | Reward: -37215
+2025-12-01 07:17:26,464 [DEBUG] [Gen 247 | Timestep 11] Prompt Length: 7 | Generated Tokens: 7454 | Reward: -37215
+[Gen 247 | Timestep 11] Prompt Length: 7 | Generated Tokens: 7454 | Reward: -37215
+2025-12-01 07:26:39,257 [DEBUG] [Gen 247 | Timestep 12] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 07:26:39,257 [DEBUG] [Gen 247 | Timestep 12] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 247 | Timestep 12] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 07:26:39,257 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 07:26:39,257 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 07:32:13,628 [DEBUG] [Gen 247 | Timestep 13] Prompt Length: 7 | Generated Tokens: 11607 | Reward: -12297
+2025-12-01 07:32:13,628 [DEBUG] [Gen 247 | Timestep 13] Prompt Length: 7 | Generated Tokens: 11607 | Reward: -12297
+[Gen 247 | Timestep 13] Prompt Length: 7 | Generated Tokens: 11607 | Reward: -12297
+2025-12-01 07:32:13,628 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 07:32:13,628 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 07:34:26,763 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 07:34:26,763 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 07:34:26,816 [DEBUG] [Gen 247 | Timestep 14] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 07:34:26,816 [DEBUG] [Gen 247 | Timestep 14] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 247 | Timestep 14] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 07:41:54,031 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 07:41:54,031 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 07:41:54,070 [DEBUG] [Gen 247 | Timestep 15] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 07:41:54,070 [DEBUG] [Gen 247 | Timestep 15] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 247 | Timestep 15] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 07:46:42,517 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 07:46:42,517 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 07:46:42,540 [DEBUG] [Gen 247 | Timestep 16] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 07:46:42,540 [DEBUG] [Gen 247 | Timestep 16] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 247 | Timestep 16] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 07:55:55,566 [DEBUG] [Gen 247 | Timestep 17] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 07:55:55,566 [DEBUG] [Gen 247 | Timestep 17] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 247 | Timestep 17] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 07:55:55,567 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 07:55:55,567 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 08:05:08,504 [DEBUG] [Gen 247 | Timestep 18] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 08:05:08,504 [DEBUG] [Gen 247 | Timestep 18] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 247 | Timestep 18] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 08:05:08,504 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 08:05:08,504 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 08:11:17,952 [DEBUG] [Gen 247 | Timestep 19] Prompt Length: 7 | Generated Tokens: 12448 | Reward: -7251
+2025-12-01 08:11:17,952 [DEBUG] [Gen 247 | Timestep 19] Prompt Length: 7 | Generated Tokens: 12448 | Reward: -7251
+[Gen 247 | Timestep 19] Prompt Length: 7 | Generated Tokens: 12448 | Reward: -7251
+2025-12-01 08:11:17,969 [DEBUG] Saved new >8192 prompt (unique).
+2025-12-01 08:11:17,969 [DEBUG] Saved new >8192 prompt (unique).
+2025-12-01 08:11:17,969 [INFO] [Budgeted Success] after 2800 evals (offset 2740): Success@OGF≥2=0.650, Success@OGF≥4=0.383
+2025-12-01 08:11:17,969 [INFO] [Budgeted Success] after 2800 evals (offset 2740): Success@OGF≥2=0.650, Success@OGF≥4=0.383
+2025-12-01 08:11:17,969 [INFO] Generation 247 SUMMARY: {"generation": 247, "population": [{"prompt_length": 7, "reward": -41859}, {"prompt_length": 7, "reward": 6975}, {"prompt_length": 7, "reward": -36525}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -6453}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -37215}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -12297}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -7251}], "best_reward": 16372, "average_reward": -301001.75}
+2025-12-01 08:11:17,969 [INFO] Generation 247 SUMMARY: {"generation": 247, "population": [{"prompt_length": 7, "reward": -41859}, {"prompt_length": 7, "reward": 6975}, {"prompt_length": 7, "reward": -36525}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -6453}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -37215}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -12297}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -7251}], "best_reward": 16372, "average_reward": -301001.75}
+Generation 247 SUMMARY: {"generation": 247, "population": [{"prompt_length": 7, "reward": -41859}, {"prompt_length": 7, "reward": 6975}, {"prompt_length": 7, "reward": -36525}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -6453}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -37215}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -12297}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -7251}], "best_reward": 16372, "average_reward": -301001.75}
+2025-12-01 08:11:17,974 [INFO] Checkpoint saved at generation 247
+2025-12-01 08:11:17,974 [INFO] Checkpoint saved at generation 247
+--- End of Generation 247 ---
+
+2025-12-01 08:11:17,975 [INFO] Generation 248 START
+2025-12-01 08:11:17,975 [INFO] Generation 248 START
+2025-12-01 08:20:30,950 [DEBUG] [Gen 248 | Timestep 0] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 08:20:30,950 [DEBUG] [Gen 248 | Timestep 0] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 248 | Timestep 0] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 08:20:30,950 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 08:20:30,950 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 08:29:44,095 [DEBUG] [Gen 248 | Timestep 1] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 08:29:44,095 [DEBUG] [Gen 248 | Timestep 1] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 248 | Timestep 1] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 08:29:44,096 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 08:29:44,096 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 08:38:56,986 [DEBUG] [Gen 248 | Timestep 2] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 08:38:56,986 [DEBUG] [Gen 248 | Timestep 2] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 248 | Timestep 2] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 08:38:56,987 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 08:38:56,987 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 08:48:10,004 [DEBUG] [Gen 248 | Timestep 3] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 08:48:10,004 [DEBUG] [Gen 248 | Timestep 3] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 248 | Timestep 3] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 08:48:10,004 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 08:48:10,004 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 08:50:39,194 [DEBUG] [Gen 248 | Timestep 4] Prompt Length: 7 | Generated Tokens: 6352 | Reward: -43827
+2025-12-01 08:50:39,194 [DEBUG] [Gen 248 | Timestep 4] Prompt Length: 7 | Generated Tokens: 6352 | Reward: -43827
+[Gen 248 | Timestep 4] Prompt Length: 7 | Generated Tokens: 6352 | Reward: -43827
+2025-12-01 08:54:32,981 [DEBUG] [Gen 248 | Timestep 5] Prompt Length: 7 | Generated Tokens: 8954 | Reward: -28215
+2025-12-01 08:54:32,981 [DEBUG] [Gen 248 | Timestep 5] Prompt Length: 7 | Generated Tokens: 8954 | Reward: -28215
+[Gen 248 | Timestep 5] Prompt Length: 7 | Generated Tokens: 8954 | Reward: -28215
+2025-12-01 08:54:32,981 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 08:54:32,981 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 09:03:45,903 [DEBUG] [Gen 248 | Timestep 6] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 09:03:45,903 [DEBUG] [Gen 248 | Timestep 6] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 248 | Timestep 6] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 09:03:45,903 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 09:03:45,903 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 09:10:26,891 [DEBUG] [Gen 248 | Timestep 7] Prompt Length: 7 | Generated Tokens: 13176 | Reward: -2883
+2025-12-01 09:10:26,891 [DEBUG] [Gen 248 | Timestep 7] Prompt Length: 7 | Generated Tokens: 13176 | Reward: -2883
+[Gen 248 | Timestep 7] Prompt Length: 7 | Generated Tokens: 13176 | Reward: -2883
+2025-12-01 09:10:26,892 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 09:10:26,892 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 09:19:39,988 [DEBUG] [Gen 248 | Timestep 8] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 09:19:39,988 [DEBUG] [Gen 248 | Timestep 8] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 248 | Timestep 8] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 09:19:39,989 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 09:19:39,989 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 09:28:10,560 [DEBUG] [Gen 248 | Timestep 9] Prompt Length: 7 | Generated Tokens: 15534 | Reward: 11265
+2025-12-01 09:28:10,560 [DEBUG] [Gen 248 | Timestep 9] Prompt Length: 7 | Generated Tokens: 15534 | Reward: 11265
+[Gen 248 | Timestep 9] Prompt Length: 7 | Generated Tokens: 15534 | Reward: 11265
+2025-12-01 09:28:10,560 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 09:28:10,560 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 09:33:35,842 [DEBUG] [Gen 248 | Timestep 10] Prompt Length: 7 | Generated Tokens: 11382 | Reward: -13647
+2025-12-01 09:33:35,842 [DEBUG] [Gen 248 | Timestep 10] Prompt Length: 7 | Generated Tokens: 11382 | Reward: -13647
+[Gen 248 | Timestep 10] Prompt Length: 7 | Generated Tokens: 11382 | Reward: -13647
+2025-12-01 09:33:35,886 [DEBUG] Saved new >8192 prompt (unique).
+2025-12-01 09:33:35,886 [DEBUG] Saved new >8192 prompt (unique).
+2025-12-01 09:38:41,083 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 09:38:41,083 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 09:38:41,161 [DEBUG] [Gen 248 | Timestep 11] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 09:38:41,161 [DEBUG] [Gen 248 | Timestep 11] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 248 | Timestep 11] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 09:43:14,291 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 09:43:14,291 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 09:43:14,294 [DEBUG] [Gen 248 | Timestep 12] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 09:43:14,294 [DEBUG] [Gen 248 | Timestep 12] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 248 | Timestep 12] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 09:48:25,591 [DEBUG] [Gen 248 | Timestep 13] Prompt Length: 7 | Generated Tokens: 11030 | Reward: -15759
+2025-12-01 09:48:25,591 [DEBUG] [Gen 248 | Timestep 13] Prompt Length: 7 | Generated Tokens: 11030 | Reward: -15759
+[Gen 248 | Timestep 13] Prompt Length: 7 | Generated Tokens: 11030 | Reward: -15759
+2025-12-01 09:48:25,613 [DEBUG] Saved new >8192 prompt (unique).
+2025-12-01 09:48:25,613 [DEBUG] Saved new >8192 prompt (unique).
+2025-12-01 09:57:38,530 [DEBUG] [Gen 248 | Timestep 14] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 09:57:38,530 [DEBUG] [Gen 248 | Timestep 14] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 248 | Timestep 14] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 09:57:38,544 [DEBUG] Saved new >8192 prompt (unique).
+2025-12-01 09:57:38,544 [DEBUG] Saved new >8192 prompt (unique).
+2025-12-01 10:06:51,476 [DEBUG] [Gen 248 | Timestep 15] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 10:06:51,476 [DEBUG] [Gen 248 | Timestep 15] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 248 | Timestep 15] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 10:06:51,477 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 10:06:51,477 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 10:16:04,419 [DEBUG] [Gen 248 | Timestep 16] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 10:16:04,419 [DEBUG] [Gen 248 | Timestep 16] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 248 | Timestep 16] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 10:16:04,420 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 10:16:04,420 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 10:17:49,108 [DEBUG] [Gen 248 | Timestep 17] Prompt Length: 7 | Generated Tokens: 4775 | Reward: -53289
+2025-12-01 10:17:49,108 [DEBUG] [Gen 248 | Timestep 17] Prompt Length: 7 | Generated Tokens: 4775 | Reward: -53289
+[Gen 248 | Timestep 17] Prompt Length: 7 | Generated Tokens: 4775 | Reward: -53289
+2025-12-01 10:27:02,059 [DEBUG] [Gen 248 | Timestep 18] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 10:27:02,059 [DEBUG] [Gen 248 | Timestep 18] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 248 | Timestep 18] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 10:27:02,059 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 10:27:02,059 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 10:34:19,996 [DEBUG] [Gen 248 | Timestep 19] Prompt Length: 7 | Generated Tokens: 14001 | Reward: 2067
+2025-12-01 10:34:19,996 [DEBUG] [Gen 248 | Timestep 19] Prompt Length: 7 | Generated Tokens: 14001 | Reward: 2067
+[Gen 248 | Timestep 19] Prompt Length: 7 | Generated Tokens: 14001 | Reward: 2067
+2025-12-01 10:34:19,996 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 10:34:19,996 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 10:34:19,996 [INFO] [Budgeted Success] after 2820 evals (offset 2740): Success@OGF≥2=0.688, Success@OGF≥4=0.412
+2025-12-01 10:34:19,996 [INFO] [Budgeted Success] after 2820 evals (offset 2740): Success@OGF≥2=0.688, Success@OGF≥4=0.412
+2025-12-01 10:34:19,996 [INFO] Generation 248 SUMMARY: {"generation": 248, "population": [{"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -43827}, {"prompt_length": 7, "reward": -28215}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -2883}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 11265}, {"prompt_length": 7, "reward": -13647}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -15759}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -53289}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 2067}], "best_reward": 16372, "average_reward": -99029.4}
+2025-12-01 10:34:19,996 [INFO] Generation 248 SUMMARY: {"generation": 248, "population": [{"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -43827}, {"prompt_length": 7, "reward": -28215}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -2883}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 11265}, {"prompt_length": 7, "reward": -13647}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -15759}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -53289}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 2067}], "best_reward": 16372, "average_reward": -99029.4}
+Generation 248 SUMMARY: {"generation": 248, "population": [{"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -43827}, {"prompt_length": 7, "reward": -28215}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -2883}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 11265}, {"prompt_length": 7, "reward": -13647}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -15759}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -53289}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 2067}], "best_reward": 16372, "average_reward": -99029.4}
+2025-12-01 10:34:20,005 [INFO] Checkpoint saved at generation 248
+2025-12-01 10:34:20,005 [INFO] Checkpoint saved at generation 248
+--- End of Generation 248 ---
+
+2025-12-01 10:34:20,005 [INFO] Generation 249 START
+2025-12-01 10:34:20,005 [INFO] Generation 249 START
+2025-12-01 10:36:11,514 [DEBUG] [Gen 249 | Timestep 0] Prompt Length: 7 | Generated Tokens: 5027 | Reward: -51777
+2025-12-01 10:36:11,514 [DEBUG] [Gen 249 | Timestep 0] Prompt Length: 7 | Generated Tokens: 5027 | Reward: -51777
+[Gen 249 | Timestep 0] Prompt Length: 7 | Generated Tokens: 5027 | Reward: -51777
+2025-12-01 10:44:31,737 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 10:44:31,737 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 10:44:31,741 [DEBUG] [Gen 249 | Timestep 1] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 10:44:31,741 [DEBUG] [Gen 249 | Timestep 1] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 249 | Timestep 1] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 10:49:06,693 [DEBUG] [Gen 249 | Timestep 2] Prompt Length: 7 | Generated Tokens: 10085 | Reward: -21429
+2025-12-01 10:49:06,693 [DEBUG] [Gen 249 | Timestep 2] Prompt Length: 7 | Generated Tokens: 10085 | Reward: -21429
+[Gen 249 | Timestep 2] Prompt Length: 7 | Generated Tokens: 10085 | Reward: -21429
+2025-12-01 10:49:06,694 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 10:49:06,694 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 10:58:20,536 [DEBUG] [Gen 249 | Timestep 3] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 10:58:20,536 [DEBUG] [Gen 249 | Timestep 3] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 249 | Timestep 3] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 10:58:20,537 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 10:58:20,537 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 11:06:03,388 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 11:06:03,388 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 11:06:03,432 [DEBUG] [Gen 249 | Timestep 4] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 11:06:03,432 [DEBUG] [Gen 249 | Timestep 4] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 249 | Timestep 4] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 11:15:15,936 [DEBUG] [Gen 249 | Timestep 5] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 11:15:15,936 [DEBUG] [Gen 249 | Timestep 5] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 249 | Timestep 5] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 11:15:15,937 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 11:15:15,937 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 11:17:01,978 [DEBUG] [Gen 249 | Timestep 6] Prompt Length: 7 | Generated Tokens: 4827 | Reward: -52977
+2025-12-01 11:17:01,978 [DEBUG] [Gen 249 | Timestep 6] Prompt Length: 7 | Generated Tokens: 4827 | Reward: -52977
+[Gen 249 | Timestep 6] Prompt Length: 7 | Generated Tokens: 4827 | Reward: -52977
+2025-12-01 11:26:14,458 [DEBUG] [Gen 249 | Timestep 7] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 11:26:14,458 [DEBUG] [Gen 249 | Timestep 7] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 249 | Timestep 7] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 11:26:14,458 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 11:26:14,458 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 11:31:30,981 [DEBUG] [Gen 249 | Timestep 8] Prompt Length: 7 | Generated Tokens: 11166 | Reward: -14943
+2025-12-01 11:31:30,981 [DEBUG] [Gen 249 | Timestep 8] Prompt Length: 7 | Generated Tokens: 11166 | Reward: -14943
+[Gen 249 | Timestep 8] Prompt Length: 7 | Generated Tokens: 11166 | Reward: -14943
+2025-12-01 11:31:30,981 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 11:31:30,981 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 11:40:43,666 [DEBUG] [Gen 249 | Timestep 9] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 11:40:43,666 [DEBUG] [Gen 249 | Timestep 9] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 249 | Timestep 9] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 11:40:43,680 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 11:40:43,680 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 11:45:05,448 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 11:45:05,448 [WARNING] [Fallback] Prompt caused a non-fatal generation failure: probability tensor contains either `inf`, `nan` or element < 0 (returning large negative reward).
+2025-12-01 11:45:05,452 [DEBUG] [Gen 249 | Timestep 10] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 11:45:05,452 [DEBUG] [Gen 249 | Timestep 10] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+[Gen 249 | Timestep 10] Prompt Length: 7 | Generated Tokens: 0 | Reward: -1000000.0
+2025-12-01 11:54:17,886 [DEBUG] [Gen 249 | Timestep 11] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 11:54:17,886 [DEBUG] [Gen 249 | Timestep 11] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 249 | Timestep 11] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 11:54:17,886 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 11:54:17,886 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 11:56:46,559 [DEBUG] [Gen 249 | Timestep 12] Prompt Length: 7 | Generated Tokens: 6336 | Reward: -43923
+2025-12-01 11:56:46,559 [DEBUG] [Gen 249 | Timestep 12] Prompt Length: 7 | Generated Tokens: 6336 | Reward: -43923
+[Gen 249 | Timestep 12] Prompt Length: 7 | Generated Tokens: 6336 | Reward: -43923
+2025-12-01 12:05:58,935 [DEBUG] [Gen 249 | Timestep 13] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 12:05:58,935 [DEBUG] [Gen 249 | Timestep 13] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 249 | Timestep 13] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 12:05:58,936 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 12:05:58,936 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 12:12:10,515 [DEBUG] [Gen 249 | Timestep 14] Prompt Length: 7 | Generated Tokens: 12506 | Reward: -6903
+2025-12-01 12:12:10,515 [DEBUG] [Gen 249 | Timestep 14] Prompt Length: 7 | Generated Tokens: 12506 | Reward: -6903
+[Gen 249 | Timestep 14] Prompt Length: 7 | Generated Tokens: 12506 | Reward: -6903
+2025-12-01 12:12:10,515 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 12:12:10,515 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 12:21:22,981 [DEBUG] [Gen 249 | Timestep 15] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 12:21:22,981 [DEBUG] [Gen 249 | Timestep 15] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 249 | Timestep 15] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 12:21:22,981 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 12:21:22,981 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 12:30:35,453 [DEBUG] [Gen 249 | Timestep 16] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 12:30:35,453 [DEBUG] [Gen 249 | Timestep 16] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 249 | Timestep 16] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 12:30:35,476 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 12:30:35,476 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 12:39:47,865 [DEBUG] [Gen 249 | Timestep 17] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 12:39:47,865 [DEBUG] [Gen 249 | Timestep 17] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+[Gen 249 | Timestep 17] Prompt Length: 7 | Generated Tokens: 16384 | Reward: 16370
+2025-12-01 12:39:47,865 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 12:39:47,865 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 12:44:35,276 [DEBUG] [Gen 249 | Timestep 18] Prompt Length: 7 | Generated Tokens: 10421 | Reward: -19413
+2025-12-01 12:44:35,276 [DEBUG] [Gen 249 | Timestep 18] Prompt Length: 7 | Generated Tokens: 10421 | Reward: -19413
+[Gen 249 | Timestep 18] Prompt Length: 7 | Generated Tokens: 10421 | Reward: -19413
+2025-12-01 12:44:35,276 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 12:44:35,276 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 12:51:05,272 [DEBUG] [Gen 249 | Timestep 19] Prompt Length: 7 | Generated Tokens: 12938 | Reward: -4311
+2025-12-01 12:51:05,272 [DEBUG] [Gen 249 | Timestep 19] Prompt Length: 7 | Generated Tokens: 12938 | Reward: -4311
+[Gen 249 | Timestep 19] Prompt Length: 7 | Generated Tokens: 12938 | Reward: -4311
+2025-12-01 12:51:05,273 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 12:51:05,273 [DEBUG] Skipped saving duplicate >8192 prompt.
+2025-12-01 12:51:05,273 [INFO] [Budgeted Success] after 2840 evals (offset 2740): Success@OGF≥2=0.690, Success@OGF≥4=0.420
+2025-12-01 12:51:05,273 [INFO] [Budgeted Success] after 2840 evals (offset 2740): Success@OGF≥2=0.690, Success@OGF≥4=0.420
+2025-12-01 12:51:05,273 [INFO] Generation 249 SUMMARY: {"generation": 249, "population": [{"prompt_length": 7, "reward": -51777}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -21429}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -52977}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -14943}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -43923}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -6903}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -19413}, {"prompt_length": 7, "reward": -4311}], "best_reward": 16372, "average_reward": -153417.3}
+2025-12-01 12:51:05,273 [INFO] Generation 249 SUMMARY: {"generation": 249, "population": [{"prompt_length": 7, "reward": -51777}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -21429}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -52977}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -14943}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -43923}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -6903}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -19413}, {"prompt_length": 7, "reward": -4311}], "best_reward": 16372, "average_reward": -153417.3}
+Generation 249 SUMMARY: {"generation": 249, "population": [{"prompt_length": 7, "reward": -51777}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": -21429}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -52977}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -14943}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -1000000.0}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -43923}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -6903}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": 16370}, {"prompt_length": 7, "reward": -19413}, {"prompt_length": 7, "reward": -4311}], "best_reward": 16372, "average_reward": -153417.3}
+2025-12-01 12:51:05,278 [INFO] Checkpoint saved at generation 249
+2025-12-01 12:51:05,278 [INFO] Checkpoint saved at generation 249
+--- End of Generation 249 ---
+
+2025-12-01 12:51:05,278 [INFO] Generation 250 START
+2025-12-01 12:51:05,278 [INFO] Generation 250 START
+2025-12-01 12:54:09,612 [DEBUG] [Gen 250 | Timestep 0] Prompt Length: 7 | Generated Tokens: 7492 | Reward: -36987
+2025-12-01 12:54:09,612 [DEBUG] [Gen 250 | Timestep 0] Prompt Length: 7 | Generated Tokens: 7492 | Reward: -36987
+[Gen 250 | Timestep 0] Prompt Length: 7 | Generated Tokens: 7492 | Reward: -36987
+[watchdog] Soft timeout (~11h50m). Sending SIGTERM to 845271
