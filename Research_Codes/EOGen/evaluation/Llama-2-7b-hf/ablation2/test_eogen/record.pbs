@@ -1,0 +1,180 @@
+#!/bin/bash
+#PBS -N record_prov
+#PBS -l select=1:ncpus=2:mem=8gb
+#PBS -l walltime=00:30:00
+#PBS -j oe
+
+set -euo pipefail
+
+# ---- locations (edit if your working dir differs) ----
+SCR=/srv/scratch/$USER
+WORKDIR=$SCR/phi_test              # where your experiment lives
+VENV=$SCR/venvs/ea/bin/activate    # your venv
+MODEL_DIRS=(
+  "$SCR/models/phi3-mini"
+  "$SCR/models/falcon-7b"
+  # If you also have a local LLaMA snapshot, add it here.
+  # "$SCR/models/llama-2-7b-hf"
+)
+
+cd "$WORKDIR"
+
+# ---- create artifact dir ----
+TS=$(date +%Y%m%d_%H%M%S)
+RUN_DIR="$WORKDIR/run_artifacts_${TS}"
+mkdir -p "$RUN_DIR"/{code,pbs,models,env,logs}
+
+echo "[record_prov] Writing to: $RUN_DIR"
+
+# ---- capture machine info ----
+{
+  echo "date: $(date)"
+  echo "host: $(hostname)"
+  echo "jobid: ${PBS_JOBID:-NA}"
+  echo "pwd: $(pwd)"
+  echo
+  echo "uname -a:"
+  uname -a
+  echo
+  echo "df -h (scratch):"
+  df -h "$SCR" || true
+} > "$RUN_DIR/env/system.txt"
+
+# ---- GPU info if present (safe on CPU nodes too) ----
+{
+  echo "nvidia-smi -L:"
+  nvidia-smi -L 2>/dev/null || echo "no nvidia-smi"
+  echo
+  echo "nvidia-smi query:"
+  nvidia-smi --query-gpu=index,name,uuid,driver_version,memory.total --format=csv,noheader 2>/dev/null || true
+} > "$RUN_DIR/env/gpu.txt"
+
+# ---- snapshot code + PBS scripts ----
+# adjust these patterns if your layout differs
+cp -v "$WORKDIR"/test_eogen.py "$RUN_DIR/code/" 2>/dev/null || true
+cp -v "$WORKDIR"/test_eogen/*.py "$RUN_DIR/code/" 2>/dev/null || true
+cp -v "$WORKDIR"/*.pbs "$RUN_DIR/pbs/" 2>/dev/null || true
+cp -v "$WORKDIR"/test_eogen/*.pbs "$RUN_DIR/pbs/" 2>/dev/null || true
+
+# ---- record git commit if applicable ----
+(
+  cd "$WORKDIR" || exit 0
+  if command -v git >/dev/null 2>&1 && git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    {
+      echo "git rev-parse HEAD:"
+      git rev-parse HEAD
+      echo
+      echo "git status --porcelain:"
+      git status --porcelain || true
+      echo
+      echo "git remote -v:"
+      git remote -v || true
+    } > "$RUN_DIR/env/git.txt"
+  else
+    echo "not a git repo" > "$RUN_DIR/env/git.txt"
+  fi
+)
+
+# ---- environment versions ----
+source "$VENV"
+
+python - << 'PY' > "$RUN_DIR/env/python_versions.txt"
+import sys
+import torch, transformers
+print("python:", sys.version.replace("\n"," "))
+print("torch:", torch.__version__)
+print("transformers:", transformers.__version__)
+PY
+
+python -m pip freeze > "$RUN_DIR/env/pip_freeze.txt" || true
+
+# ---- helper: hash model shards + key tokenizer/config files ----
+hash_model_dir () {
+  local d="$1"
+  local out="$2"
+  echo "MODEL_DIR=$d" > "$out"
+  if [ ! -d "$d" ]; then
+    echo "MISSING_DIR" >> "$out"
+    return 0
+  fi
+
+  echo "" >> "$out"
+  echo "ls (top-level):" >> "$out"
+  (ls -lah "$d" | head -n 200) >> "$out" 2>/dev/null || true
+
+  echo "" >> "$out"
+  echo "sha256 (selected files):" >> "$out"
+
+  # hash weight shards (safetensors/bin), tokenizer files, config
+  (
+    cd "$d"
+    # only hash files that exist
+    for pat in "model-*.safetensors" "pytorch_model*.bin" "model.safetensors" "model.safetensors.index.json" \
+               "config.json" "generation_config.json" "tokenizer.json" "tokenizer.model" "tokenizer_config.json" \
+               "special_tokens_map.json" "added_tokens.json" ; do
+      for f in $pat; do
+        [ -f "$f" ] && sha256sum "$f"
+      done
+    done
+  ) >> "$out" 2>/dev/null || true
+
+  echo "" >> "$out"
+  echo "du -sh:" >> "$out"
+  du -sh "$d" >> "$out" 2>/dev/null || true
+}
+
+# ---- record model fingerprints ----
+for d in "${MODEL_DIRS[@]}"; do
+  name=$(basename "$d")
+  hash_model_dir "$d" "$RUN_DIR/models/${name}_fingerprint.txt"
+done
+
+# ---- record run config stub (edit after if you want) ----
+cat > "$RUN_DIR/run_config.txt" << TXT
+EOGen/RL evaluation provenance snapshot created at: $TS
+
+Paths:
+- WORKDIR: $WORKDIR
+- VENV: $VENV
+
+Suggested items to include in paper appendix:
+- Model id + revision (if using HF); OR sha256 fingerprints for local snapshots (see models/*_fingerprint.txt)
+- transformers/torch versions (env/python_versions.txt)
+- pip freeze (env/pip_freeze.txt)
+- decoding caps (B), sampling params (temperature/top_p), trials per prompt (T), seeds, chunking (num_chunks)
+TXT
+
+echo "[record_prov] Done: $RUN_DIR"
+
+cat > "$RUN_DIR/README.md" << 'MD'
+# Run provenance bundle
+
+This folder captures the exact code, environment, and model snapshot fingerprints used for the experiments.
+
+## Contents
+- `code/` — Python scripts used for the run (snapshot at collection time)
+- `pbs/` — PBS scripts used to submit array/merge jobs
+- `env/`
+  - `python_versions.txt` — Python / torch / transformers versions
+  - `pip_freeze.txt` — full package list
+  - `system.txt` — host + filesystem info
+  - `gpu.txt` — GPU + driver info (if available)
+  - `git.txt` — git commit + status (if applicable)
+- `models/` — model snapshot fingerprints (SHA256 of weight shards + tokenizer/config files)
+- `run_config.txt` — human-editable notes about the run configuration
+
+## How results were produced
+- Evaluation is parallelized with PBS arrays (`num_chunks` and `chunk_index` in the PBS scripts).
+- Each array task writes a per-chunk CSV; a separate merge job concatenates chunks and generates the merged CSV/plots.
+
+## Reproducing this run (high-level)
+1. Use the same model snapshot:
+   - If you use local snapshots, verify files using `models/*_fingerprint.txt`.
+   - If you use HF ids, pin to the same revision/commit and confirm the same shard hashes.
+2. Create a matching environment using `env/pip_freeze.txt` (and torch/transformers versions).
+3. Run the PBS scripts in `pbs/` (or run locally with the same arguments and seeds).
+4. Merge outputs using the merge script/mode recorded in `pbs/` or `code/`.
+
+## Notes
+- If resuming chunked runs, keep `num_chunks` constant to preserve the prompt?chunk mapping.
+MD
